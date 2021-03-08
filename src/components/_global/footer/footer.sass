@@ -1,0 +1,125 @@
+footer
+	background: #ffffff
+	// border-top: thin solid $main
+	.footer-top
+		padding: 25px 0
+		.title
+			font-size: 16px
+			font-weight: 700
+			color: $main
+			line-height: 1.3
+			margin-bottom: 30px
+			max-width: 260px
+		.content
+			font-size: 12.5px
+			font-weight: 400
+			color: $gray
+			line-height: 1.2
+			margin-top: 15px
+			*
+				font-size: 12.5px
+				font-weight: 400
+				color: $gray
+				line-height: 1.2
+			strong
+				font-weight: 700
+			a
+				+hover-underline(95%, $main)
+				&:hover
+					color: $main
+		.menu-list
+			// display: flex
+			// align-items: center
+			// flex-wrap: wrap
+			margin-top: 5px
+			width: 100%
+			order: 2
+			li
+				margin-top: 15px
+				margin-right: 45px
+				&:last-child
+					margin-right: 0
+				a
+					font-size: 14px
+					font-weight: 400
+					color: $black
+					text-transform: uppercase
+					transition: .2s ease-in-out all
+					&:hover
+						color: $main
+		.content-right
+			width: 100%
+			order: 1
+		.follow-and-logo
+			width: 100%
+			order: 3
+			// margin-top: 20px
+			display: flex
+			align-items: flex-end
+			justify-content: space-between
+			.follow
+				font-size: 12.5px
+				font-weight: 700
+				color: $black
+				ul
+					display: flex
+					align-items: center
+					li
+						display: flex
+						justify-content: center
+						align-items: center
+						margin-right: 10px
+						margin-top: 10px
+						a
+							display: flex
+							justify-content: center
+							align-items: center
+							width: 30px
+							height: 30px
+							border-radius: 50%
+							background: $main
+							border: 1px solid $main
+							transition: .2s ease-in-out all
+							em
+								font-size: 18px
+								color: #ffffff
+							&:hover
+								background: #ffffff
+								em
+									color: $main
+			.logo
+				margin-top: 10px
+		@media(min-width: 576px)
+			padding: 30px 0
+		@media(min-width: 768px)
+			padding: 35px 0
+			.menu-list
+				margin-top: 0
+				display: flex
+				align-items: center
+				flex-wrap: wrap
+				order: 1
+				li
+					margin-top: 0
+			.title
+				margin-bottom: 40px
+			.content-right
+				order: 2
+				margin-top: 50px
+			.follow-and-logo
+				order: 3
+				// margin-top: 28px
+		@media(min-width: 1280px)
+			padding-top: 105px
+			padding-bottom: 40px
+	.footer-bottom
+		background: $main
+		padding: 12px 0
+		display: flex
+		justify-content: center
+		align-items: center
+		text-align: center
+		font-size: 12.5px
+		font-weight: 400
+		color: #ffffff
+		text-transform: uppercase

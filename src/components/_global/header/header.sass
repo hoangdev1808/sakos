@@ -1,0 +1,528 @@
+header
+	background-color: $main
+	color: #ffffff
+	padding-top: 15px
+	padding-bottom: 24px
+	position: fixed
+	z-index: 9999
+	width: 100%
+	left: 0
+	right: 0
+	top: 0
+	height: 113px
+	max-width: $layout
+	margin-left: auto
+	margin-right: auto
+	transition: 0.5s all  ease-in-out
+	transform: translateY(0)
+	&.scroll-menu
+		transform: translateY(-100%)
+		transition: 0.8s all  ease-in-out
+	@media(max-width: 768px)
+		padding: 10px 0
+		height: 70px
+	.main-wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+	.left-wrap
+		min-width: 90px
+		padding-left: 8px
+		@media(max-width: 768px)
+			padding-left: 0
+			min-width: 60px
+			img
+				max-height: 50px
+	.menu-list
+		display: flex
+		align-items: center
+	.mega-list
+		display: flex
+		align-items: center
+		li
+			&.active
+				a
+					color: $main
+	.main-language
+		padding-right: 20px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: 0
+			background: #ffffff
+			width: 1px
+			height: 10px
+		@media(max-width: 768px)
+			&::before
+				display: none
+	.language
+		font-size: 12px
+		font-weight: 400
+		color: #ffffff
+		a
+			&:hover
+				color: #ffffff
+				+hover-underline(95%, #ffffff)
+		.dropdown-menu
+			a
+				color: $main
+				&:hover
+					color: $main
+					+hover-underline(95%, $main)
+	.right-wrap
+		.top-wrap
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			// .main-search
+			// 	@media(max-width: 576px)
+			// 		display: none
+	.main-menu-top
+		margin-right: 10px
+		.menu-list
+			font-size: 12px
+			font-weight: 400
+			color: #ffffff
+			li
+				position: relative
+				padding-right: 20px
+				padding-left: 20px
+				&::before
+					content: ''
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					right: 0
+					background: #ffffff
+					width: 1px
+					height: 10px
+				&:last-child
+					&::before
+						display: none
+		@media(max-width: 768px)
+			display: none
+	.bottom-wrap
+		margin-top: 20px
+		.menu-list
+			// position: relative
+			> li
+				margin: 0 25px
+				&:first-child
+					margin-left: 0
+				&:last-child
+					margin-right: 0
+				> a
+					font-size: 18.62px
+					font-weight: 400
+					color: $pink
+					transition: .2s ease-in-out all
+					text-transform: uppercase
+					position: relative
+					text-align: center
+					&::before
+						content: ''
+						position: absolute
+						top: 41px
+						left: 50%
+						transform: translateX(-50%) rotate(45deg)
+						background: #ffffff
+						width: 15px
+						height: 15px
+						display: flex
+						justify-content: center
+						align-items: center
+						transition: .2s ease-in-out all
+						opacity: 0
+						pointer-events: none
+					&:hover
+						color: #ffffff
+						text-shadow: 0.5px 0 0 #ffffff
+				&.active
+					> a
+						color: #ffffff
+						text-shadow: 0.5px 0 0 #ffffff
+				&.has-mega-menu
+					.mega-menu
+						position: absolute
+						// top: 100%
+						top: 85px
+						left: 0
+						z-index: 11
+						width: 100%
+						color: $gray
+						// padding-top: 21px
+						padding-top: 28px
+						opacity: 0
+						transition: .2s ease-in-out all
+						pointer-events: none
+						.mega-list
+							display: flex
+							// justify-content: space-between
+							justify-content: center
+							background: #ffffff
+							padding: 13.5px 0
+							// position: relative
+							// overflow: hidden
+							// &::before
+							// 	content: ''
+							// 	position: fixed
+							// 	top: 113px
+							// 	transform: translateX(-50%)
+							// 	left: 50%
+							// 	background: #ffffff
+							// 	width: 100vw
+							// 	height: 57px
+							// 	pointer-events: none
+							// 	z-index: -1
+							li
+								margin: 0 2.2%
+								text-align: center
+								a
+									font-size: 14px
+									color: $gray
+									transition: .2s ease-in-out all
+									font-weight: 400
+									text-transform: uppercase
+									text-align: center
+									&:hover
+										color: $main
+								&.active
+									a
+										color: $main
+								&.has-mega-child
+									.mega-menu
+										top: auto
+										bottom: -57px
+										padding-top: 20px
+										.mega-list
+											background: #e7eeec
+											li
+												&.active
+													a
+														color: $main
+									&:hover
+										> a
+											color: $main
+											&::before
+												opacity: 0
+										> .mega-menu
+											opacity: 1
+											pointer-events: auto
+					.arrow-down-mobile
+						display: none
+					&:hover
+						> a
+							color: #ffffff
+							text-shadow: 0.5px 0 0 #ffffff
+							&::before
+								opacity: 1
+						> .mega-menu
+							opacity: 1
+							pointer-events: auto
+
+			@media(max-width: 1024px)
+				> li
+					margin: 0 10px
+					>
+						a
+							font-size: 16px
+			@media(max-width: 768px)
+				> li
+					&.has-mega-menu
+						.arrow-down-mobile
+							display: block
+			// 	> li
+			// 		margin: 0 15px
+			// 		> a
+			// 			font-size: 16px
+		@media(max-width: 768px)
+			display: none
+	.searchbox
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		max-width: 225px
+		margin-left: auto
+		margin-right: auto
+		input
+			border: 1px solid #ffffff
+			height: 27px
+			width: 225px
+			padding: 3px 15px
+			padding-right: 30px
+			font-size: 12px
+			font-weight: 400
+			color: $gray
+			border-radius: 5px
+			&::placeholder
+				font-size: 12px
+				font-weight: 300
+				color: $gray
+				font-style: italic
+		button
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 11
+			right: 0
+			width: 27px
+			height: 27px
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: .2s ease-in-out all
+			border: none
+			background: none
+			padding: 0
+			border-radius: 5px
+			em
+				font-size: 12px
+				color: $gray
+				transition: .2s ease-in-out all
+				line-height: 1
+			&:hover
+				em
+					color: $main
+		@media(max-width: 768px)
+			max-width: 187px
+.button-hambuger
+	display: none
+	@media(max-width: 768px)
+		display: block
+		position: relative
+		width: 26px
+		height: 26px
+		margin-left: 40px
+		+dc
+		.burger-bt-inner
+			width: 26px
+			height: 20px
+			position: absolute
+			cursor: pointer
+			span
+				content: ""
+				display: block
+				width: 100%
+				height: 2px
+				background-color: #ffffff
+				position: absolute
+				top: 50%
+				margin-top: -1px
+				transition: opacity .2s cubic-bezier(.165,.84,.44,1)
+				opacity: 1
+			&:before, &:after
+				content: ""
+				display: block
+				width: 100%
+				height: 2px
+				background-color: #ffffff
+				position: absolute
+				-webkit-transition: -webkit-transform .5s cubic-bezier(.165,.84,.44,1)
+				transition: -webkit-transform .5s cubic-bezier(.165,.84,.44,1)
+				transition: transform .5s cubic-bezier(.165,.84,.44,1)
+				transition: transform .5s cubic-bezier(.165,.84,.44,1),-webkit-transform .5s cubic-bezier(.165,.84,.44,1)
+			&:before
+				top: 0
+			&:after
+				bottom: 0
+			&.active
+				// &:before, &:after
+				// 	background-color: $main
+				span
+					// background-color: $main
+					opacity: 0
+				&:before
+					transform: translateY(9px) rotate(45deg)
+				&:after
+					transform: translateY(-9px) rotate(-45deg)
+.backdrop
+	position: fixed
+	width: 100%
+	height: 100%
+	opacity: 0
+	pointer-events: none
+	transition: .5s ease-in-out
+	background: rgba(0,0,0,.8)
+	top: 0
+	left: 0
+	z-index: 500
+	&.active
+		opacity: 1
+		pointer-events: auto
+.mobile-wrap
+	display: none
+	@media(max-width: 768px)
+		position: fixed
+		top: 70px
+		right: 0
+		bottom: 0
+		background-color: rgba($main, 1)
+		width: 100vw
+		height: calc( 100vh - 70px )
+		display: block
+		transform: translateX(100vw)
+		transition: transform .8s cubic-bezier(.165,.84,.44,1),-webkit-transform .8s cubic-bezier(.165,.84,.44,1)
+		z-index: 500
+		// padding: 15px 0
+		pointer-events: none
+		z-index: 9998
+		border-top: 1px solid #fff
+		max-height: calc( 100vh - 70px )
+		overflow-y: auto
+		overflow-x: hidden
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			background: $gray
+			width: 1px
+			height: 100%
+			pointer-events: none
+		&.active
+			opacity: 1
+			pointer-events: auto
+			transform: translateX(0)
+		.language-social
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding-top: 17px
+			padding-bottom: 34px
+			padding-left: 20px
+			padding-right: 20px
+			.language
+				display: flex
+				align-items: center
+				flex-direction: row-reverse
+				> a
+					font-size: 20px
+					color: $pink
+					margin-left: 28px
+				.dropdown-menu
+					position: relative
+					opacity: 1
+					top: auto
+					pointer-events: auto
+					left: auto
+					padding: 0
+					background: none
+					border: none
+					padding-right: 28px
+					position: relative
+					&::before
+						content: ''
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						right: 0
+						background: $pink
+						width: 1px
+						height: 17px
+					ul
+						li
+						+ li
+							margin-left: 0
+							a
+								font-size: 20px
+								color: #ffffff
+								font-weight: 700
+								width: auto
+								height: auto
+								border-radius: 0
+								background: none
+			ul.type-none
+				display: flex
+				align-items: center
+				li
+					display: flex
+					justify-content: center
+					align-items: center
+					+ li
+						margin-left: 25px
+					a
+						display: flex
+						justify-content: center
+						align-items: center
+						width: 35px
+						height: 35px
+						border-radius: 50%
+						background: #ffffff
+						transition: .2s ease-in-out all
+						color: $main
+		.menu-list
+			display: flex
+			flex-wrap: wrap
+			> li
+				width: 100%
+				justify-content: flex-start
+				padding-top: 15px
+				padding-bottom: 15px
+				padding-left: 20px
+				padding-right: 20px
+				border-top: 1px solid rgba($pink, 0.4)
+				> a
+					font-size: 30px
+					font-weight: 400
+					color: $pink
+					text-transform: uppercase
+					text-align: center
+					display: flex
+					justify-content: flex-start
+					align-items: center
+				&.active
+					> a
+						color: #ffffff
+						font-weight: 700
+				&.has-mega-menu
+					position: relative
+					.mega-menu
+						display: none
+						> .mega-list
+							display: flex
+							flex-wrap: wrap
+							padding-left: 20px
+							padding-top: 10px
+							padding-bottom: 10px
+							> li
+								width: 100%
+								+ li
+									margin-top: 15px
+								a
+									font-size: 21px
+									font-weight: 400
+									text-transform: uppercase
+									display: flex
+									justify-content: flex-start
+									align-items: center
+									text-align: center
+									color: #920a0f
+									font-weight: 400
+								&.active
+									a
+										color: #ffffff
+								&.has-mega-child
+									position: relative
+									.arrow-down-mobile
+										top: 1px
+					.arrow-down-mobile
+						position: absolute
+						top: 25px
+						right: 20px
+						z-index: 11
+						display: flex
+						justify-content: center
+						align-items: center
+						transition: .2s ease-in-out all
+						width: 24px
+						height: 24px
+						&:before
+							line-height: 1
+						&.active
+							transform: rotate(180deg)
+		.searchbox
+			margin-top: 15px
