@@ -1,0 +1,14 @@
+section.section.home-partner
+	.container 
+		.section-title Đối tác của SAKOS
+		.wrap-partner 
+			.swiper-container
+				.swiper-wrapper
+					-for(i=1; i<7; i++)
+						.swiper-slide
+							.swiper-inner
+								.img
+									img.lazyload(data-src="./img/home/part-"+i+".png" alt="")
+
+			.swiper-button-next
+			.swiper-button-prev

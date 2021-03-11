@@ -1,61 +1,115 @@
 footer 
-	.footer-top 
-		.container
-			.row
-				.col-md-3 
-					p.title SAIGON BEER-ALCOHOL-BEVERAGE CORPORATION (SABECO)
-					.content
-						p
-							strong Business registration address:
-						p 
-							address 187 Nguyen Chi Thanh, Ward 12, District 5, Ho Chi Minh City, Vietnam.
-					.content
-						p
-							strong Business:
-						p 
-							address Floor 5th, Vincom Center B, 72 Le Thanh Ton 
-								br
-								| (45A, Ly Tu Trong, Ben Nghe Ward, District 1, HCMC, Vietnam)
-						p Tel: 
-							a(href="tel: (+84) 283.829.4081") (+84) 283.829.4081 
-							| - 
-							a(href="tel: (+84) 283.829.4083") 283.829.4083 
-							| - 
-							a(href="tel: (+84) 283.829.6342") 283.829.6342 
-						p Fax: 
-							a(href="tel: (+84) 283.829.6856") (+84) 283.829.6856 
-						p Email: 
-							a(href="mailto: sabeco@sabeco.com.vn") sabeco@sabeco.com.vn
-				.col-md-5 
-					.d-flex.flex-wrap
-						ul.menu-list.type-none
-							- var menufooter = ['Our Story	','Our Brands','Investors',' Newsroom','Careers']
-							- for (i=0; i<menufooter.length; i++)
-								li 
-									a(href="#") #{menufooter[i]}
-						.content.content-right
-							p
-								strong Business:
-							p 
-								address Floor 5th, Vincom Center B, 72 Le Thanh Ton 
+	.container 
+		.row 
+			.col-lg-4 
+				.card 
+					.card__header
+						.logo
+							img(src="./img/logo-white.png" alt="")
+					.card__body 
+						.title công ty cổ phần sakos
+						ul 
+							li
+								p MST: 0304048003
+							li 
+								span.lnr.lnr-home
+								p 11A Phạm Ngọc Thạch, 
 									br
-									| (45A, Ly Tu Trong, Ben Nghe Ward, District 1, HCMC, Vietnam)
-						.follow-and-logo 
-							.follow
-								p 
-									strong Follow us on
-								ul.type-none
-									li 
-										a(href="#") 
-											em.fa.fa-facebook-f
-									li 
-										a(href="#") 
-											em.fa.fa-youtube
-									li 
-										a(href="#") 
-											em.fa.fa-linkedin
-							.logo 
-								a(href="/")
-									img(src="./img/logo-red.png", alt="")
-	.footer-bottom 
-		p COPYRIGHT © 2019, SAIGON BEER. ALL RIGHTS RESERVED
+									|Phường 6, Quận 3, Tp. HCM
+							li 
+								span.lnr.lnr-phone-handset
+								p (028) 3825 8188
+							li 
+								span.lnr.lnr-envelope
+								p sales_online@sakosvn.com
+					.card__footer
+						ul.socail.d-flex 
+							li 
+								a(href="") 
+									img(src="./img/icons/face.png" alt="")
+							li 
+								a(href="") 
+									img(src="./img/icons/zalo.png" alt="")
+							li 
+								a(href="") 
+									img(src="./img/icons/youtube.png" alt="")
+							li 
+								a(href="") 
+									img(src="./img/icons/intagram.png" alt="")
+						.bct-logo 
+							img(src="./img/icons/BCT.png" alt="")
+			.col-lg-4 
+				.card 
+					.card__header
+						.title.f-18.fw-700.color-white.text-uppercase Chăm sóc khách hàng
+					.card__body 
+						ul 
+							li
+								a(href="")  Chính sách bảo mật
+							li
+								a(href="")  Chính sách giao nhận
+							li
+								a(href="")  Chính sách đổi trả
+							li
+								a(href="")  Chính sách bảo hành
+							li
+								a(href="")  Hướng dẫn mua hàng
+							li
+								a(href="")  Quyền lợi thẻ thành viên
+
+					.card__footer
+						.title.f-18.fw-700.color-white.text-uppercase phương thức thanh toán
+						ul.d-flex 
+							li 
+								img(src="./img/icons/pay.png" alt="")
+							li 
+								img(src="./img/icons/cash.png" alt="")
+			.col-lg-4 
+				.card 
+					.card__header
+						.title.f-18.fw-700.color-white.text-uppercase b2b
+					.card__body 
+						ul 
+							li
+								a(href="") 
+									span.lnr.lnr-book
+									p E-Catalogue
+							li
+								a(href="")
+									span.lnr.lnr-phone-handset
+									p 0917.453.769
+							li
+								a(href="")
+									span.lnr.lnr-phone-handset
+									p 0941.720.505
+							li
+								a(href="")
+									span.lnr.lnr-phone-handset
+									p 0941.594.499
+							li
+								a(href="")
+									span.lnr.lnr-envelope
+									p b2b@sakosvn.com
+					.card__footer 
+						.title.f-18.fw-700.color-white.text-uppercase đăng ký nhận bản tin
+						.subscribe
+							.subscribefrm
+								input.subscribeemail(type="text" placeholder="Nhập địa chỉ email..." name="email")
+								button.subscribebutton 
+	.coppy-right
+		.container
+			.wraper-content.d-flex.align-center
+				p.design-by-canhcam.color-white.f-14
+					|© 2020 Sakos.
+					a(href='https://www.canhcam.vn/thiet-ke-website-chuyen-nghiep' target='_blank') Thiết kế website
+					| bởi
+					a(href='https://www.canhcam.vn' target='_blank')  Canh Cam
+				ul.d-flex
+					li 
+						a(href="") Điều khoản và điều kiện
+					li
+						a(href="") Chính sách bảo mật
+					li
+						a(href="") Sơ đồ trang web
+				.back-to-top.d-flex.align-center.color-white.ml-auto.f-14 Đầu trang
+					span.lnr.lnr-chevron-up

@@ -1,0 +1,135 @@
+.home-specail-product
+	padding-top: 65px
+	.section-title
+		padding-bottom: 20px
+		letter-spacing: 0.3px
+	.container--tabs
+		.nav-tabs
+			max-width: 660px
+			margin-bottom: 42px
+			border-bottom: solid 1px #555555
+			li
+				margin-left: auto
+				a
+					position: relative
+					font-size: 18/16*1rem
+					color: #666666
+					letter-spacing: 0.4px
+				&.active
+					a
+						font-weight: 700
+						color: $text
+						overflow: visible
+						&::after
+							position: absolute
+							bottom: -2px
+							left: 50%
+							transform: translateX(-50%)
+							width: 191px
+							height: 3px
+							content: ''
+							background: $black
+		.wrap-desc
+			max-width: 600px
+			margin: 0 auto
+			margin-bottom: 50px
+			p
+				text-align: center
+				font-size: 14/16*1rem
+				line-height: 20px
+		.tab-content
+			.wrap-slide
+				position: relative
+				.swiper-inner
+					position: relative
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					.option
+						position: absolute
+						top: 0
+						left: 0
+					.img
+						width: 285px
+						padding-top: 40px
+						margin-bottom: 35px
+						a
+							+img-scale(.6)
+					.filter-color
+						width: 100%
+						padding-bottom: 46px
+
+						ul
+							display: flex
+							align-items: center
+							justify-content: center
+							li
+								overflow: visible
+								display: flex
+								align-items: center
+								justify-content: center
+								a
+									position: relative
+									width: 15px
+									height: 15px
+									border-radius: 50%
+									display: flex
+									align-items: center
+									justify-content: center
+
+								+ li
+									margin-left: 12px
+								&.active
+									a
+										&::after
+											position: absolute
+											top: 50%
+											left: 50%
+											transform: translate(-50%, -50%)
+											width: 20px
+											height: 20px
+											border-radius: 50%
+											z-index: -1
+											content: ''
+											background: $white
+											border: solid 1px $black
+								&:first-child
+									a
+										background: #707070
+								&:nth-child(2)
+									a
+										background: #9e0b0f
+
+								&:nth-child(3)
+									a
+										background: #005e20
+
+								&:last-child
+									a
+										background: #2e3192
+
+					.wrap-infor
+						flex-direction: column
+						align-items: center
+						justify-content: center
+						.price-box
+							.old-price
+								text-decoration-line: line-through
+				.swiper-button-next,
+				.swiper-button-prev
+					top: 40%
+					&:focus
+						outline: none
+				.swiper-button-next
+					right: -45px
+					&::after
+						content: url('../img/icons/right.png') !important
+				.swiper-button-prev
+					left: -45px
+					&::after
+						content: url('../img/icons/left.png') !important
+			.btn-view-all
+				margin-left: auto
+				margin-right: auto
+				margin-top: 35px
+				margin-bottom: 10px

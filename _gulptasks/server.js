@@ -27,8 +27,9 @@ export const server = () => {
 	})
 
 	watch([
-		"src/js/*.js"
+		"src/js/main.js"
 	], series(jsTask));
+
 
 	watch([
 		"src/**/**.pug"

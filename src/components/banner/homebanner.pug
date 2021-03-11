@@ -1,0 +1,17 @@
+section#home-banner 
+	.home-banner 
+		.swiper-container
+			.swiper-wrapper
+				-for(i=1; i<4; i++)
+					.swiper-slide
+						.swiper-inner
+							.img
+								a(href="")
+									img.lazyload(data-src="./img/banner/b-"+i+".png" alt="")
+							.wrapper-content
+								.container
+									.content 
+										h1.title.f-36.color-white.fw-700 Merry Christmas
+										h2.sub-title.f-18.color-white.fw-400 Sale 40% tất cả các sản phẩm
+										a.btn.btn-view-more(href="") xem sản phẩm
+		.swiper-pagination

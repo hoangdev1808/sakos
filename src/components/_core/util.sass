@@ -1,46 +1,57 @@
-.d-flex
-	display: flex
-.justify-between
-	justify-content: space-between
-.justify-center
-	justify-content: center
-.align-center
-	align-items: center
-.text-center
-	text-align: center
-.text-right
-	text-align: right
-.flex-wrap
-	flex-wrap: wrap
-.text-white
-	color: #ffffff
-.button-prev, .button-next
-	cursor: pointer
-.line-bottom
-	border-bottom: 1px solid rgba($main, 0.28)
-.product_detail__pages
-	margin: 0 auto !important
-.dropdown
-	position: relative
-	cursor: pointer
-	.dropdown-menu
-		position: absolute
-		top: 150%
-		right: 0
-		width: max-content
-		background: $body
-		border: 1px solid $main
-		padding: 10px 15px
-		opacity: 0
-		pointer-events: none
-		transition: .2s ease-in-out all
-		z-index: 11
-	a
-		transition: .2s ease-in-out all
-		&:hover
-			color: $main
-	&.active, &:hover
-		.dropdown-menu
-			top: 100%
-			pointer-events: auto
-			opacity: 1
+
+.overflow
+	overflow: hidden
+.container--tabs
+	.nav-tabs
+		display: flex
+		list-style: none
+		align-items: center
+		> li
+			display: flex
+			align-items: center
+			&.active
+				> a
+					color: $main
+					cursor: default
+	.tab-content
+		width: 100%
+
+		> .tab-pane
+			display: none
+
+			&.active
+				display: block
+
+		> .active
+			display: block
+.lcl
+	overflow: hidden
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-box-orient: vertical
+
+	&-1
+		-webkit-line-clamp: 1
+
+	&-2
+		-webkit-line-clamp: 2
+
+	&-3
+		-webkit-line-clamp: 3
+
+	&-4
+		-webkit-line-clamp: 4
+.swiper-button-next,
+.swiper-button-prev
+	&::after
+		font-family: Linearicons-Free !important
+		font-size: 36px !important
+		color: $white
+	&:focus
+		outline: none
+.swiper-button-next
+	&::after
+		content: '\e876' !important
+.swiper-button-prev
+	&::after
+		content: '\e875' !important

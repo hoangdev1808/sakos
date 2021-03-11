@@ -1,0 +1,47 @@
+.home-feature
+	background: #f8f8f8
+	.wrapper-grid
+		display: grid
+		grid-gap: 10px
+		grid-template-columns: repeat(3,1fr)
+		.item
+			position: relative
+			.content
+				position: absolute
+				bottom: 23px
+				left: 50%
+				transform: translateX(-50%)
+				a
+					font-size: 24/16*1rem
+					color: $white
+					font-weight: 700
+			&:nth-child(1)
+				grid-column: 1 / 2
+				grid-row: 1/2
+				.img
+					a
+						+img-ratio(145/400)
+			&:nth-child(2)
+				grid-column: 2 / 3
+				grid-row: 1/4
+				.img
+					a
+						+img-ratio(255/400)
+			&:nth-child(3)
+				grid-column: 3 / 4
+				grid-row: 1/5
+				.img
+					a
+						+img-ratio(410/400)
+			&:nth-child(4)
+				grid-column: 1 / 2
+				grid-row: 2/5
+				.img
+					a
+						+img-ratio(255/400)
+			&:nth-child(5)
+				grid-column: 2 / 3
+				grid-row: 4/5
+				.img
+					a
+						+img-ratio(145/400)

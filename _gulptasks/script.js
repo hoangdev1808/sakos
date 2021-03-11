@@ -11,13 +11,11 @@ import sourcemap from "gulp-sourcemaps";
 export const jsTask = () => {
 	return src(["src/js/main.js"])
 		.pipe(plumber())
-		.pipe(sourcemap.init())
 		.pipe(babel({
 			presets: ["@babel/preset-env"]
 		}))
 		.pipe(uglifyBabel())
 		.pipe(rename("main.min.js"))
-		.pipe(sourcemap.write("."))
 		.pipe(dest("dist/js"))
 }
 

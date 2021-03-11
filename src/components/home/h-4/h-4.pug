@@ -1,0 +1,26 @@
+section.section.home-news 
+	.container 
+		.section-title Tin tức - Sự kiện 
+		.row 
+			.col-lg-6 
+				.big-item 
+					.img 
+						a(href="") 
+							img.lazyload(data-src="./img/home/news-1.png" alt="")
+					.content 
+						time 16.12.2020
+						.title 
+							a(href="") Tại sao bất kỳ ai cũng nên cần một chiếc vali kéo vải?
+						a.item-view-more(href="") Xem thêm
+			.col-lg-6 
+				-for(i=2; i<5; i++)
+					.small-item 
+						.img 
+							a(href="") 
+								img.lazyload(data-src="./img/home/news-"+i+".png" alt="")
+						.content 
+							time 16.12.2020
+							.title 
+								a.lcl.lcl-2(href="") Sakos đạt Top 10 thương hiệu, nhãn hiệu danh tiếng Việt Nam 2020
+							a.item-view-more(href="") Xem thêm
+			a.btn.btn-view-all(href="") xem tất cả

@@ -1,0 +1,38 @@
+.home-map
+	position: relative
+	height: 450px
+	width: 100%
+	.wrapper-content
+		max-width: 390px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		display: flex
+		flex-direction: column
+		align-items: center
+		.sub-title
+			line-height: 22px
+			margin-bottom: 24px
+		.section-title
+			font-size: 24/16*1rem
+			line-height: 30px
+			letter-spacing: 0.05px
+		.btn-search-shop
+			width: 280px
+			height: 50px
+			color: #444444
+			border: solid 1px #444444
+			text-transform: uppercase
+			font-size: 14/16*1rem
+			letter-spacing: 1px
+			display: flex
+			align-items: center
+			justify-content: center
+			background: transparent
+			transition: all .5s
+			@media screen and ( min-width: 1025px )
+				&:hover
+					background: $main
+					border: solid 1px transparent
+					color: $white

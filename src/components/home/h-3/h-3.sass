@@ -1,0 +1,53 @@
+.home-b2b
+	.img
+		a
+			+img-ratio(400/600)
+	.content
+		width: 100%
+		height: 100%
+		padding-left: 45px
+		padding-right: 36px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		.section-title
+			text-align: left
+			color: #1c1d28
+			letter-spacing: 0.05px
+			padding-bottom: 18px
+			line-height: auto
+		.desc
+			line-height: 24px
+			color: #666666
+		.wrap-button
+			align-items: center
+			margin-top: 27px
+			.btn-download,
+			.btn-view-more
+				width: 200px
+				height: 40px
+
+			.btn-download
+				background: $main
+				color: $white
+				text-transform: uppercase
+				display: flex
+				align-items: center
+				justify-content: center
+				transition: all .5s
+				.lnr
+					padding-right: 10px
+					font-size: 20/16*1rem
+				@media screen and ( min-width: 1025px )
+					&:hover
+						border: solid 1px #444444
+						color: #444444
+						background: transparent
+			.btn-view-more
+				border: solid 1px #444444
+				color: #444444
+				margin-left: 20px
+				@media screen and ( min-width: 1025px )
+					&:hover
+						border: solid 1px transparent
+						color: $white

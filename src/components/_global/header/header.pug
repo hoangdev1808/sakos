@@ -1,102 +1,87 @@
-header
-	.container
-		.main-wrap
-			.left-wrap 
-				a(href="/")
-					img(src="./img/logo.png", alt="")
-			.right-wrap 
-				.top-wrap 
-					.main-language
-						.language.dropdown
-							a(href="#") VN 
-							.dropdown-menu 
-								ul.type-none
-									li 
-										a(href="#") EN 
-					.main-menu-top
-						ul.menu-list.type-none
-							li 
-								a(href="#") Contact Us
-							li 
-								a(href="#") Distribution
-					.main-search
-						.searchbox
-							input(type="text" placeholder="Search... ")
-							button(type="submit") 
-								em.fa.fa-search
-					.button-hambuger
-						.burger-bt-inner
-							span
-				.bottom-wrap 
-					ul.menu-list.type-none
-						li.has-mega-menu 
-							a(href="#") Our Story
-							.mega-menu
-								ul.mega-list.type-none
-									li 
-										a(href="#") Overview
-									li 
-										a(href="#") Vietnamese pride
-									li 
-										a(href="#") Our breweries
-									li 
-										a(href="#") Distribution
-									li 
-										a(href="#") Faqs
-							span.arrow-down-mobile
-						li.has-mega-menu 
-							a(href="#") Our brands
-							.mega-menu
-								ul.mega-list.type-none
-									li.has-mega-child
-										a(href="#") Bear 
-										.mega-menu 
-											ul.mega-list.type-none
-												li 
-													a(href="#") Saigon Special
-												li 
-													a(href="#") Sai Gon Export
-												li 
-													a(href="#") Saigon Larger
-												li 
-													a(href="#") 333 Export
-												li 
-													a(href="#") Saigon Gold
-										span.arrow-down-mobile
-									li 
-										a(href="#") Alcohol
-									li 
-										a(href="#") Beverage
-							span.arrow-down-mobile
-						li.has-mega-menu
-							a(href="#") Investors
-							.mega-menu
-								ul.mega-list.type-none
-									li 
-										a(href="#") information disclosure
-									li 
-										a(href="#") financial statements
-									li 
-										a(href="#") annual general meetings
-									li 
-										a(href="#") annual reports
-									li 
-										a(href="#") corporate governancE
-									li 
-										a(href="#") investor news
-							span.arrow-down-mobile
+header 
+	.nav-top 
+		.container 
+			.wrapper-container.d-flex.align-center  
+				.wrapper-left.d-flex.align-center 
+					ul.hotline.d-flex.align-center  
+						li
+							img(src="./img/icons/phone.png" alt="")
 						li 
-							a(href="#") Sustainability
-						li 
-							a(href="#") Newsroom
-						li.has-mega-menu
-							a(href="#") Careers
-							.mega-menu
-								ul.mega-list.type-none
-									li 
-										a(href="#") Recruitment
-									li 
-										a(href="#") Working Culture at sabeco
-							span.arrow-down-mobile
-	.mobile-wrap 
-		.language-social
+							a(href="") 0941 349 955
+							a(href="") 1600 599 962
+					.shop-sytem 
+						a(href="")
+							img(src="./img/icons/shop.png" alt="")
+							span Hệ thống cửa hàng
+				.wrapper-middle
+					.swiper-container
+						.swiper-wrapper
+							-for(i=1; i<4; i++)
+								.swiper-slide
+									.swiper-inner
+										a(href="") Christmas Direct Discount 40%
+					.swiper-button-prev
+					.swiper-button-next
+				.wrapper-right.d-flex.align-center
+					.account-wrapper.d-flex.align-center
+						a.account-icon(href='javascript:;')
+							img(src="./img/icons/user.png" alt="")
+						ul.wrap.d-flex.align-center
+							li
+								a.text(href='') Đăng nhập /  
+							li
+								a.text(href='')  Đăng ký
+					.shopping-card-toggle.d-flex.align-center
+						.icon
+							img(src="./img/icons/shop2.png" alt="")
+						span.quilt 05
+						.shopping-cart-wrapper
+							.head
+								.cart-quantity
+									span.material-icons shopping_cart
+									.cart-number.total-cart-items
+										span.item-quantity 0
+								.cart-number
+									p
+										| Tổng cộng:
+										span 0 ₫
+							.body
+								.scroll-wrapper.cartpanel
+							.btn-center(style='display: none;')
+								a.btn.btn-primary(href='')
+									span Thanh toán 
+									em.lnr.lnr-arrow-right
+					.language-wrapper.d-flex.align-center 
+						ul 
+							li 
+								a(href="") 
+									img(src="./img/icons/vn.png" alt="")
+							li
+								a(href="") 
+									img(src="./img/icons/en.png" alt="")
+	.nav-bottom 
+		.container 
+			nav.navbar.d-flex 
+				.nav-brand 
+					a(href="") 
+						img(src="./img/logo.png" alt="")
+				ul.nav.d-flex
+					li.nav-item
+						a.nav-link.f-16.fw-700.text-uppercase(href="") Giới thiệu
+					li.nav-item
+						a.nav-link.f-16.fw-700.text-uppercase(href="") Sản phẩm
+					li.nav-item
+						a.nav-link.f-16.fw-700.text-uppercase(href="") Nhãn hàng
+					li.nav-item
+						a.nav-link.f-16.fw-700.text-uppercase(href="") Khuyến mãi
+					li.nav-item
+						a.nav-link.f-16.fw-700.text-uppercase(href="") Tin tức - sự kiện
+					li.nav-item
+						a.nav-link.f-16.fw-700.text-uppercase(href="") B2B
+				.wrapper-search
+					.form-group
+						input(type="text" placeholder="Tìm kiếm")
+						button.btn.btn-search
+							img(src="./img/icons/search.png" alt="")
+				//- .search-icon
+				//- 	em.material-icons search

@@ -17,7 +17,6 @@ export const sassTask = () => {
 			"src/components/_global/**.sass",
 			"src/components/**/**.sass",
 		])
-		.pipe(sourcemap.init())
 		.pipe(concat("main.min.sass"))
 		.pipe(sass().on("error", sass.logError))
 		.pipe(postcss([
@@ -30,7 +29,6 @@ export const sassTask = () => {
 				order: "concentric-css",
 			})
 		]))
-		.pipe(sourcemap.write("."))
 		.pipe(dest("dist/css"))
 };
 

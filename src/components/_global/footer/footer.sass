@@ -1,125 +1,139 @@
 footer
-	background: #ffffff
-	// border-top: thin solid $main
-	.footer-top
-		padding: 25px 0
-		.title
-			font-size: 16px
-			font-weight: 700
-			color: $main
-			line-height: 1.3
-			margin-bottom: 30px
-			max-width: 260px
-		.content
-			font-size: 12.5px
-			font-weight: 400
-			color: $gray
-			line-height: 1.2
-			margin-top: 15px
-			*
-				font-size: 12.5px
-				font-weight: 400
-				color: $gray
-				line-height: 1.2
-			strong
-				font-weight: 700
-			a
-				+hover-underline(95%, $main)
-				&:hover
-					color: $main
-		.menu-list
-			// display: flex
-			// align-items: center
-			// flex-wrap: wrap
-			margin-top: 5px
-			width: 100%
-			order: 2
-			li
-				margin-top: 15px
-				margin-right: 45px
-				&:last-child
-					margin-right: 0
-				a
-					font-size: 14px
-					font-weight: 400
-					color: $black
-					text-transform: uppercase
-					transition: .2s ease-in-out all
-					&:hover
-						color: $main
-		.content-right
-			width: 100%
-			order: 1
-		.follow-and-logo
-			width: 100%
-			order: 3
-			// margin-top: 20px
-			display: flex
-			align-items: flex-end
-			justify-content: space-between
-			.follow
-				font-size: 12.5px
-				font-weight: 700
-				color: $black
-				ul
+	padding-top: 64px
+	background: #202020
+	.card
+		&__header,
+		&__footer
+			.title
+				letter-spacing: 1.4px
+				margin-bottom: 25px
+		&__body
+			.title
+				font-size: 18/16*1rem
+				color: $white
+				text-transform: uppercase
+				letter-spacing: 1.6px
+				padding-bottom: 10px
+		&__header
+			.logo
+				margin-bottom: 31px
+		&__body
+			ul
+				li
+					padding-bottom: 12px
+					display: flex
+					p
+						color: $white
+						letter-spacing: 1.5px
+					span
+						&.lnr
+							color: $white
+							padding-right: 10px
+							letter-spacing: 1.3px
+							font-size: 14/16*1rem
+							line-height: 20px
+					a
+						display: flex
+						color: $white
+						padding-right: 10px
+						letter-spacing: 1px
+						font-size: 14/16*1rem
+						line-height: 20px
+		&__footer
+			margin-top: 12px
+			.socail
+				align-items: center
+				margin-bottom: 20px
+				li
 					display: flex
 					align-items: center
-					li
-						display: flex
-						justify-content: center
-						align-items: center
-						margin-right: 10px
-						margin-top: 10px
-						a
-							display: flex
-							justify-content: center
-							align-items: center
-							width: 30px
-							height: 30px
-							border-radius: 50%
-							background: $main
-							border: 1px solid $main
-							transition: .2s ease-in-out all
-							em
-								font-size: 18px
-								color: #ffffff
-							&:hover
-								background: #ffffff
-								em
-									color: $main
-			.logo
-				margin-top: 10px
-		@media(min-width: 576px)
-			padding: 30px 0
-		@media(min-width: 768px)
-			padding: 35px 0
-			.menu-list
-				margin-top: 0
-				display: flex
-				align-items: center
-				flex-wrap: wrap
-				order: 1
-				li
+					justify-content: center
+					+ li
+						margin-left: 20px
+			.subscribe
+				.subscribefrm
+					width: 100%
+					height: 50%
+					position: relative
+					border: solid 1px $gray
+
+					input
+						width: 100%
+						height: 50px
+						border: none
+						background: none
+						color: $white
+						padding-left: 15px
+						&::placeholder
+							color: $white
+					button
+						position: absolute
+						top: 50%
+						right: 0
+						width: 140px
+						height: 100%
+						border: none
+						background: $main
+						color: $white
+						font-size: 1rem
+						text-transform: uppercase
+						font-weight: 700
+						transform: translateY(-50%)
+						letter-spacing: 1px
+						&::before
+							content: 'đăng ký'
+						&::after
+							padding-left: 8px
+							content: url('../img/icons/right-1.png')
+
+	.col-lg-4
+		&:first-child
+			.card
+				&__body
+					ul
+						li
+							padding-bottom: 17px
+							&:nth-child(2)
+								padding-bottom: 28px
+							&:nth-child(3)
+								padding-bottom: 14px
+				&__footer
 					margin-top: 0
-			.title
-				margin-bottom: 40px
-			.content-right
-				order: 2
-				margin-top: 50px
-			.follow-and-logo
-				order: 3
-				// margin-top: 28px
-		@media(min-width: 1280px)
-			padding-top: 105px
-			padding-bottom: 40px
-	.footer-bottom
-		background: $main
-		padding: 12px 0
-		display: flex
-		justify-content: center
-		align-items: center
-		text-align: center
-		font-size: 12.5px
-		font-weight: 400
-		color: #ffffff
-		text-transform: uppercase
+
+		&:last-child
+			.card
+				&__footer
+					margin-top: 45px
+					.title
+						margin-bottom: 20px
+		&:nth-child(2)
+			.card
+				&__footer
+					.title
+						margin-bottom: 20px
+					ul
+						li + li
+							margin-left: 10px
+	.coppy-right
+		margin-top: 50px
+		border-top: solid 1px #444444
+		.wraper-content
+			padding: 18px 0
+			.design-by-canhcam
+				letter-spacing: 1.3px
+				a
+					font-size: 14/16*1rem
+			ul
+				margin-left: 105px
+				li
+					a
+						color: $white
+						font-size: 14/16*1rem
+					+ li
+						margin-left: 41px
+			.back-to-top
+				cursor: pointer
+				letter-spacing: 1.5px
+				.lnr
+					font-size: 1rem
+					padding-left: 20px
