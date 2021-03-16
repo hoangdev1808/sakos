@@ -1,0 +1,91 @@
+.page-contact
+	back
+	.wrapper-form
+		display: flex
+		justify-content: space-between
+		@media screen and ( max-width: 1279.9px )
+			display: block
+		.section-title
+			text-align: left
+			letter-spacing: normal
+			font-size: r(30px)
+			@media screen and ( max-width: 767.9px )
+				font-size: r(18px)
+		.form
+			background-color: rgba($white, .95)
+			border-radius: 5px
+			padding: r(35px)
+			width: 65%
+			margin: 0 auto
+			@media screen and ( min-width: 1280px )
+				flex: 0 0 500px
+			@media screen and ( max-width: 1279.9px )
+				margin-bottom: r(30px)
+			@media screen and ( max-width: 767.9px )
+				width: 100%
+			.wrap-form
+				.form-row
+					display: flex
+					width: 100%
+					justify-content: space-between
+					@media screen and ( max-width: 767.9px )
+						display: block
+					.form-group
+						width: 48%
+						@media screen and ( max-width: 767.9px )
+							width: 100%
+						input[type="text"]
+							width: 100%
+				.form-group
+					input[type="text"],
+					textarea
+						background-color: $white
+					textarea
+						height: 120px
+				input[type="reset"]
+					display: none
+				.frm-btn
+					border-radius: 5px
+					background: $main
+					color: $white
+					width: 115px
+					transition: .3s all ease-in-out
+					margin-left: auto
+					&::before
+						content: "east"
+						right: 0
+						left: auto
+						border-radius: 0
+						background-color: $main
+						color: $white
+						width: auto
+						height: auto
+						font-size: 30px
+						pointer-events: none
+						right: 15px
+						font-weight: 400
+						transition: .3s all ease-in-out
+					&::after
+						display: none
+					input[type="submit"]
+						background: $main
+						color: $white
+						font-size: 14px
+						font-weight: 400
+						z-index: 3
+						padding-left: 0
+						text-transform: none
+						transition: .3s all ease-in-out
+					&:hover
+						background: $white
+						input[type="submit"]
+							background: $white
+							color: $main
+						&::before
+							color: $main
+							background-color: $white
+			&.form-1
+				.section-title
+					padding-top: 30px
+					padding-bottom: 40px
+
