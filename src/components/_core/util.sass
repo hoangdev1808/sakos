@@ -43,15 +43,41 @@
 		-webkit-line-clamp: 4
 .swiper-button-next,
 .swiper-button-prev
-	&::after
-		font-family: Linearicons-Free !important
-		font-size: 36px !important
+	&::before
+		font-family: Linearicons-Free
+		font-size: 36px
 		color: $white
+
 	&:focus
 		outline: none
+	&::after
+		display: none !important
 .swiper-button-next
-	&::after
-		content: '\e876' !important
+	&::before
+		content: '\e876'
 .swiper-button-prev
-	&::after
-		content: '\e875' !important
+	&::before
+		content: '\e875'
+.turn-back
+	position: absolute
+	top: 0
+	right: 0
+	width: 30px
+	height: 30px
+	background: $main
+	z-index: 99
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	em
+		color: $white
+		font-size: 18/16*1rem
+
+	@media screen and ( min-width: 992px )
+		display: none
+.tab-panels
+	.tab-content
+		display: none
+		&.active
+			display: block

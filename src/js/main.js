@@ -20,18 +20,38 @@ const scrollTop = () => {
 
 /*==================== MAIN MENU MOBILE ====================*/
 const mainMenu = () => {
-	$("header .navbar")
-		.find(".btn-toggle")
+	$("header").find(".btn-toggle")
 		.on("click", function () {
 			$(this).toggleClass("active");
 			$("#overlay").toggleClass("active");
+			$("header").find('.nav').toggleClass('active');
+			if ($('header').find('.megasub').hasClass('active')) {
+				$('header').find('.megasub').removeClass('active')
+			}
 		});
+	$("header").find(".btn-sub")
+		.on("click", function () {
+			$(this).parent().next().toggleClass('active')
+		});
+	$("header").find(".btnsub")
+		.on("click", function () {
+			$(this).parent().next().toggleClass('active');
+		})
 	$("#overlay").on('click', function () {
 		let $this = $(this);
 		$this.removeClass('active');
 		$('.btn-toggle').removeClass('active');
-	})
+	});
+	$('.turn-back ').on('click', function () {
+		if ($(this).closest('.megasub').find('.megasub__dropdown').hasClass('active')) {
+			$(this).closest('.megasub').find('.megasub__dropdown').removeClass('active')
+		} else {
+			$(this).closest('.megasub').removeClass('active')
+		}
+	});
+
 }
+
 
 /*==========LISTBANNER SLIDER==========*/
 const initSwiper = () => {
@@ -39,10 +59,10 @@ const initSwiper = () => {
 		loop: false,
 		speed: 2000,
 		effect: "fade",
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		fadeEffect: {
 			crossFade: true,
 		},
@@ -196,6 +216,9 @@ const setBackgroundElement = () => {
 		});
 	});
 };
+
+/*==================== INIT MAPPING ====================*/
+
 /*==================== LOAD FUNCTION ====================*/
 $(document).ready(function () {
 	scrollTop();
@@ -203,6 +226,7 @@ $(document).ready(function () {
 	initSwiper();
 	checkLayoutBanner();
 	setBackgroundElement();
+
 	/*==================== LIST TAB =========================*/
 	var theTabs = $(".nav-tabs li");
 	var i;
