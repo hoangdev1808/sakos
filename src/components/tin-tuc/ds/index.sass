@@ -1,0 +1,120 @@
+.page-news-list
+	[class*='col-']
+		margin-bottom: r(30px)
+	time
+		display: block
+		color: $gray
+		font-size: 12px
+		margin-bottom: r(10px)
+	.wrap-left
+		ul
+			display: flex
+			padding: 0
+			list-style: none
+			white-space: nowrap
+			overflow: auto
+			&::-webkit-scrollbar
+				height: 1px
+			li:not(:last-child)
+				margin-right: 15px
+			li
+				a
+					position: relative
+					&::before
+						content: ""
+						width: 0
+						height: 1px
+						background-color: $main
+						position: absolute
+						bottom: 0px
+						left: 0 
+						transition: .3s all ease-in-out
+				&.active, &:hover
+					a
+						color: $main
+						transition: .3s all
+						&::before
+							width: 100%
+
+	.item
+		.img
+			+img-ratio(622/810)
+			border-radius: 5px
+		.wrap-content
+			padding-top: r(30px)
+			.item-view-more
+				display: block
+				width: max-content
+				font-size: r(14px)
+				font-weight: 600
+				text-decoration: underline
+				text-transform: uppercase
+				transition: .3s all ease-in-out
+				&:hover
+					color: $main
+			.title
+				margin-bottom: r(15px)
+				color: $main
+				display: inline-block
+			.brief-content
+				+line(2)
+				margin-bottom: r(15px)
+		&.sm
+			.img
+				+img-ratio(225/390)
+			.title
+				color: $text
+			.wrap-content
+				padding-right: r(60px)
+				@media screen and ( max-width: 767.9px )
+					padding-right: 0
+	.wrap-right
+		.subscribe
+			margin-top: 10px
+			.subscribefrm
+				width: 100%
+				height: 50%
+				position: relative
+				border: solid 1px $gray
+
+				input
+					width: 100%
+					height: 50px
+					border: none
+					background: none
+					color: $gray
+					padding-left: 15px
+					&::placeholder
+						color: $gray
+				button
+					position: absolute
+					top: 50%
+					right: 0
+					width: 140px
+					height: 100%
+					border: none
+					background: $main
+					color: $white
+					font-size: 1rem
+					text-transform: uppercase
+					font-weight: 700
+					transform: translateY(-50%)
+					letter-spacing: 1px
+					&::before
+						content: 'đăng ký'
+					&::after
+						padding-left: 8px
+						content: url('../img/icons/right-1.png')
+		@media screen and ( max-width: 1199.98px )
+			.subscribe
+				.subscribefrm
+					button
+						width: 110px
+						font-size: 13/16*1rem
+						display: flex
+						align-items: center
+						justify-content: center
+	.btn-view-all
+		border-radius: 5px
+		width: 200px
+		margin: 0 auto

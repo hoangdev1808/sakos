@@ -195,6 +195,8 @@ const checkLayoutBanner = () => {
 		$("main").css("padding-top", heightHeader);
 	} else if (pagesBanner.length >= 1) {
 		$("main").css("padding-top", heightHeader);
+	} else {
+		$("main").css("padding-top", heightHeader);
 	}
 };
 

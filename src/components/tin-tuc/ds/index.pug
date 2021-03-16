@@ -1,3 +1,54 @@
 section.section.page-news-list 
 	.container 
-		
+		.section-title Tin tức
+		.row 
+			.col-lg-8.col-md-12
+				.wrap-left 
+					ul.color-text.f-14
+						li.active 
+							a(href="")  Tin mới nhất
+						li 
+							a(href="") Tin được xem nhiều nhất
+						li 
+							a(href="") Tất cả
+			.col-lg-4.col-md-12
+				.wrap-right
+					.color-text.f-14.fw-700 Đăng ký để nhận khuyến mãi 30% khi mua hàng
+					.subscribe
+						.subscribefrm
+							input.subscribeemail(type="text" placeholder="Nhập địa chỉ email..." name="email")
+							button.subscribebutton
+		.row 
+			.col-md-8.col-sm-12
+				.item.zoom-img
+					a(href="").img
+						img.lazyload(data-src="./img/news/1.png", alt="")
+					.wrap-content
+						time 16.12.2020
+						a(href="").title.f-24.fw-700 Tại sao bất kỳ ai cũng nên cần một chiếc vali kéo vải?
+						.brief-content.f-14.color-text Thứ mà hầu hết các chàng trai công sở phải mang theo bên mình mỗi ngày chính là chiếc balo. Đặc biệt, với những ai cần phải mang theo laptop, giấy tờ và tài liệu lỉnh kỉnh thì sở hữu một chiếc balo đi làm rất quan trọng.
+						a(href="").item-view-more Xem thêm
+			.col-md-4.col-sm-12
+				.row
+					-for(i=1; i<3; i++)
+						.col-lg-12.col-sm-6
+							.item.sm.zoom-img
+								a(href="").img
+									img.lazyload(data-src="./img/news/2.png", alt="")
+								.wrap-content
+									time 16.12.2020
+									a(href="").title.f-18 Tại sao bất kỳ ai cũng nên cần một chiếc vali kéo vải?
+									a(href="").item-view-more Xem thêm
+		.row
+			-for(i=1; i<4; i++)
+				.col-md-4.col-sm-12
+					.item.sm.zoom-img
+						a(href="").img
+							img.lazyload(data-src="./img/news/2.png", alt="")
+						.wrap-content
+							time 16.12.2020
+							a(href="").title.f-18 Tại sao bất kỳ ai cũng nên cần một chiếc vali kéo vải?
+							a(href="").item-view-more Xem thêm
+		.btn.btn-view-all 
+			span Xem thêm
+			.material-icons keyboard_arrow_down
