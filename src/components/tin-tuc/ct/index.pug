@@ -1,0 +1,44 @@
+section.section.news-detail-page
+	.container
+		.row 
+			.col-lg-8.col-md-12
+				.wrap-top 
+					.section-title Tại sao Vali nhựa luôn được yêu thích nhất cho hành trình trải nghiệm?
+				.wrap-bottom 
+					.date 
+						.color-text Ngày đăng : &nbsp;
+						time 16.12.2020
+					.social 
+						.color-text Chia sẻ : &nbsp;
+						a(href="").face
+							img(src="./img/news/face.png", alt="") 
+						a(href="").zalo
+							img(src="./img/news/zalo.png", alt="") 
+				.wrap-content
+					p Thiết kế trẻ trung, khả năng chống thấm nước hoàn hảo, bền bỉ trong mọi chuyến đi chính là các ưu điểm khiến Vali nhựa Sakos trở thành “tri kỷ” cho những hành trình khám phá và trải nghiệm.
+					h2 1. Thiết kế trẻ trung, màu sắc đa dạng phù hợp nhiều phong cách
+					p Với chất liệu nhựa, bạn dễ dàng có nhiều sự lựa chọn màu sắc hơn so với các dòng sản phẩm khác. Các Vali nhựa tại Sakos đa dạng màu sắc nổi bật từ đỏ, đen, xanh navi, xám, v.v… giúp bạn thoả sức chọn phong cách thích hợp cho mình.
+					img(src="./img/news/3.png", alt="")
+				.wrap-comment 
+					.section-title Bình luận
+			.col-lg-4.col-md-12 
+				.wrap-right-main
+					.color-text.f-14.fw-700 Đăng ký để nhận khuyến mãi 30% khi mua hàng
+					.subscribe
+						.subscribefrm
+							input.subscribeemail(type="text" placeholder="Nhập địa chỉ email..." name="email")
+							button.subscribebutton
+				.news-other 
+					.section-title Tin tức - Sự kiện khác
+					-for(i=1; i<5; i++)
+						.wrap-item 
+							.item 
+								a.img(href="")
+									img.lazyload(data-src="./img/news/2.png", alt="")
+								.wrap-item__content
+									time 16.12.2020
+									a(href="").title Sakos chào hè: mua COMBO Vali vải và Túi xách – Nhận quà rầm rộ
+					-for(i=1; i<4; i++)
+						.wrap-item-2
+							a(href="").img
+								img.lazyload(data-src="./img/news/5.png", alt="")
