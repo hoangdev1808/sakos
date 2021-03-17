@@ -33,10 +33,10 @@
 				position: absolute
 				left: 0
 				top: 0
-			.img
-				display: flex
-				justify-content: center
+			.big-img
 				padding-top: 25px
+			.img
+				+img-ratio(180/215, contain)
 			.sm-box
 				display: flex
 				justify-content: center
@@ -47,6 +47,7 @@
 					border: 1px solid #eaeaea
 					background-color: #f8f8f8
 					+dc
+					cursor: pointer
 					&:not(:last-child)
 						margin-right: 10px
 					&.active
@@ -69,6 +70,8 @@
 						text-decoration: line-through
 						color: $gray
 						text-transform: uppercase
+						@media screen and ( max-width: 767.9px )
+							font-size: r(14px)
 					.pricesale
 						font-size: r(18px)
 						font-weight: 800
