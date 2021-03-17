@@ -219,6 +219,25 @@ const setBackgroundElement = () => {
 	});
 };
 
+const tabPanel = () => {
+	$(".support-page .wrap-right ul li .title").on("click", function(e) {
+		var t = $(this).closest("li").find(".content");
+		$(this)
+			.closest(".support-page .wrap-right ul")
+			.find(".content")
+			.not(t)
+			.slideUp();
+		$(this).hasClass("active")
+			? $(this).removeClass("active")
+			: ($(this)
+					.closest(".wrap-card")
+					.find(".title.active")
+					.removeClass("active"),
+			  $(this).addClass("active")),
+			t.stop(!1, !0).slideToggle(),
+			e.preventDefault();
+	})
+} 
 /*==================== INIT MAPPING ====================*/
 
 /*==================== LOAD FUNCTION ====================*/
@@ -228,6 +247,7 @@ $(document).ready(function () {
 	initSwiper();
 	checkLayoutBanner();
 	setBackgroundElement();
+	tabPanel();
 
 	/*==================== LIST TAB =========================*/
 	var theTabs = $(".nav-tabs li");

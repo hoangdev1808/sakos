@@ -1,0 +1,60 @@
+.support-page
+	.wrap-left
+		position: relative
+		.img
+			+img-ratio(650/600)
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba(black, 0.5)
+			z-index: 2
+		.content
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			z-index: 3
+			width: 100%
+			text-align: center
+	.wrap-right
+		ul
+			padding: r(40px) r(30px)
+			li
+				cursor: pointer
+				&:first-child
+					.title
+						border-top: 1px solid $gray
+				.content
+					display: none
+					padding: r(10px) 0
+					padding-right: r(20px)
+					border-bottom: 1px solid $gray
+					height: 260px
+					overflow-y: auto
+				.title
+					position: relative
+					border-bottom: 1px solid $gray
+					padding: r(10px) 0
+					color: $black
+					font-weight: 700
+					transition: .15s all ease-in-out
+					&::before
+						content: "keyboard_arrow_down"
+						position: absolute
+						pointer-events: none
+						font-family: "Material Icons"
+						right: 0
+						top: 50%
+						transform: translateY(-50%)  rotate(0)
+						font-size: 16px
+						color: $text
+						transition: .3s all ease-out
+					&.active
+						color: $main
+						&::before
+							transform: translateY(-50%)  rotate(-180deg)
+							color: $main
