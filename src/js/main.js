@@ -185,6 +185,34 @@ const initSwiper = () => {
 			},
 		},
 	});
+	let otherNews = new Swiper(".swiper-discount-other .swiper-container", {
+		loop: true,
+		speed: 2000,
+		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
+		autoplay: {
+			delay: 3000,
+		},
+		navigation: {
+			nextEl: ".swiper-discount-other .swiper-button-next",
+			prevEl: ".swiper-discount-other .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 10,
+				slidesPerView: 1,
+			},
+			768: {
+				spaceBetween: 20,
+				slidesPerView: 2,
+			},
+			1024: {
+				spaceBetween: 30,
+				slidesPerView: 3,
+			},
+		},
+	});
 }
 // ===========================CHECK BANNER=========================//
 const checkLayoutBanner = () => {
