@@ -1,0 +1,96 @@
+.brand
+	padding-bottom: r(70px)
+	.brand__header
+		display: flex
+		justify-content: space-between
+		padding-bottom: 10px
+		border-bottom: 1px solid $gray
+		margin-bottom: r(20px)
+		.seemore
+			display: inline-flex
+			align-items: center
+			position: relative
+			padding-right: 20px
+			color: $main
+			font-weight: 700
+			&::before
+				content: "chevron_right"
+				font-family: "Material Icons"
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+				color: $main
+			&:hover
+				text-decoration: underline
+	.brand__body
+		@media screen and ( max-width: 991.9px )
+			[class*='col-']
+				margin-bottom: r(30px)
+		.brand-item 
+			position: relative
+			.option
+				position: absolute
+				left: 0
+				top: 0
+			.img
+				display: flex
+				justify-content: center
+				padding-top: 25px
+			.sm-box
+				display: flex
+				justify-content: center
+				padding-top: r(50px)
+				.sm-img
+					width: 40px
+					height: 40px
+					border: 1px solid #eaeaea
+					background-color: #f8f8f8
+					+dc
+					&:not(:last-child)
+						margin-right: 10px
+					&.active
+						border: 1px solid #ff0000
+			.title
+				text-align: center
+				margin: r(20px) 0
+				transition: .3s all ease-in-out
+				&:hover
+					color: $main
+			.wrap-price
+				display: flex
+				justify-content: space-between
+				align-items: center
+				@media screen and ( max-width: 1279.9px )
+					display: block
+					text-align: center
+				.price
+					.priceold
+						text-decoration: line-through
+						color: $gray
+						text-transform: uppercase
+					.pricesale
+						font-size: r(18px)
+						font-weight: 800
+						@media screen and ( max-width: 767.9px )
+							font-size: 1rem
+				.order
+					.btn
+						padding: r(10px) r(15px)
+						+dc
+						text-transform: uppercase
+						font-size: 12px
+						letter-spacing: 1.2px
+						border: 1px solid $text
+						border-radius: 5px
+						background: $white
+						max-width: 110px
+						transition: .3s all ease-in-out
+						@media screen and ( max-width: 1279.9px )
+							margin-top: r(20px)
+							margin-left: auto
+							margin-right: auto
+						&:hover
+							border: 1px solid $main
+							color: $white
+							background: $main
