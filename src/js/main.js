@@ -230,7 +230,7 @@ const tabPanel = () => {
 		$(this).hasClass("active")
 			? $(this).removeClass("active")
 			: ($(this)
-					.closest(".wrap-card")
+					.closest(".support-page .wrap-right ul")
 					.find(".title.active")
 					.removeClass("active"),
 			  $(this).addClass("active")),

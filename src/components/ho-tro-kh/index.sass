@@ -1,4 +1,7 @@
 .support-page
+	background-color: #f8f8f8
+	.row
+		background-color: $white
 	.wrap-left
 		position: relative
 		.img
@@ -28,6 +31,10 @@
 				&:first-child
 					.title
 						border-top: 1px solid $gray
+				&:last-child
+					.content
+						height: max-content
+						border-bottom: 0
 				.content
 					display: none
 					padding: r(10px) 0
@@ -35,6 +42,68 @@
 					border-bottom: 1px solid $gray
 					height: 260px
 					overflow-y: auto
+					.wrap-form
+						.form-row
+							display: flex
+							width: 100%
+							justify-content: space-between
+							@media screen and ( max-width: 767.9px )
+								display: block
+							.form-group
+								width: 48%
+								@media screen and ( max-width: 767.9px )
+									width: 100%
+								input[type="text"]
+									width: 100%
+						.form-group
+							input[type="text"],
+							textarea
+								background-color: $white
+							textarea
+								height: 60px
+						input[type="reset"]
+							display: none
+						.frm-btn
+							border-radius: 5px
+							background: $main
+							color: $white
+							width: 115px
+							transition: .3s all ease-in-out
+							margin-left: auto
+							&::before
+								content: "\e87a"
+								font-family: "Linearicons-Free"
+								right: 0
+								left: auto
+								border-radius: 0
+								background-color: $main
+								color: $white
+								width: auto
+								height: auto
+								font-size: 30px
+								pointer-events: none
+								right: 15px
+								font-weight: 400
+								transition: .3s all ease-in-out
+							&::after
+								display: none
+							input[type="submit"]
+								background: $main
+								color: $white
+								font-size: 14px
+								font-weight: 400
+								z-index: 3
+								padding-left: 0
+								text-transform: none
+								transition: .3s all ease-in-out
+							&:hover
+								background: $white
+								input[type="submit"]
+									background: $white
+									color: $main
+								&::before
+									color: $main
+									background-color: $white
 				.title
 					position: relative
 					border-bottom: 1px solid $gray
