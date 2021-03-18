@@ -191,30 +191,25 @@ const initSwiper = () => {
 		spaceBetween: 30,
 		observer: true,
 		observeParents: true,
+		autoplay: {
+			delay: 3000,
+		},
 		navigation: {
-			nextEl: ".wrapper-history .swiper-button-next",
-			prevEl: ".wrapper-history .swiper-button-prev",
+			nextEl: ".swiper-discount-other .swiper-button-next",
+			prevEl: ".swiper-discount-other .swiper-button-prev",
 		},
 		breakpoints: {
 			320: {
-				slidesPerView: 1,
 				spaceBetween: 10,
-			},
-			375: {
 				slidesPerView: 1,
-				spaceBetween: 10,
-			},
-			575: {
-				slidesPerView: 1,
-				spaceBetween: 10,
 			},
 			768: {
+				spaceBetween: 20,
 				slidesPerView: 2,
-				spaceBetween: 30,
 			},
-			1280: {
+			1024: {
 				spaceBetween: 30,
-				slidesPerView: 6,
+				slidesPerView: 3,
 			},
 		},
 	});
