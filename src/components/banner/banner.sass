@@ -59,12 +59,41 @@
 			+img-ratio(700/1920)
 		.wrap-content
 			position: absolute
-			top: 50%
+			top: 46%
 			left: 0
 			width: 100%
 			transform: translateY(-50%)
 			.content
 				.title
-					padding-bottom: 23px
+					padding-bottom: 0
 				.sub-title
 					padding-bottom: 28px
+	@media screen and ( max-width: 1199.98px )
+		.banner-wrap
+			.wrap-content
+				.content
+					.title
+						font-size: 30/16*1rem
+	@media screen and ( max-width: 767.98px )
+		.banner-wrap
+			.wrap-content
+				.content
+					.title
+						font-size: 26/16*1rem
+						padding-bottom: 7px
+					.sub-title
+						padding-bottom: 20px
+	@media screen and ( max-width: 575.98px )
+		.banner-wrap
+			.wrap-content
+				.content
+					.title
+						font-size: 18/16*1rem
+					.sub-title
+						font-size: 14/16*1rem
+					.btn-view-more
+						width: max-content
+						height: auto
+						padding: 0
+						border: none
+						font-size: 14/16*1rem

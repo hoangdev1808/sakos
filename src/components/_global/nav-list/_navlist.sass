@@ -1,0 +1,30 @@
+#tool-option
+	@media screen and ( min-width: 992px )
+		display: none
+.catelogry
+	width: 100%
+	padding: 6px 0
+	margin-bottom: 8px
+	border-bottom: solid 1px #555555
+	ul
+		display: flex
+		align-items: center
+		justify-content: center
+		li
+			a
+				font-size: 18/16*1rem
+				color: $gray-2
+			+ li
+				margin-left: 53px
+			&.active
+				position: relative
+				a
+					font-weight: 700
+				&::after
+					position: absolute
+					bottom: -8px
+					left: 0
+					width: 100%
+					height: 3px
+					background: $black
+					content: ''

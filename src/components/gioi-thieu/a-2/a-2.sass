@@ -1,0 +1,245 @@
+.about-2
+	padding: 0
+	.wrapper-history
+		position: relative
+		width: 100%
+		min-height: 445px
+		height: 100%
+		padding: 260px 6px
+		overflow: hidden
+		.swiper-container
+			overflow: visible
+		.swiper-slide
+			max-width: 165px
+			.swiper-inner
+				position: relative
+				width: 142.5px
+				height: 45px
+				.item-box
+					height: 100%
+					.title
+						display: flex
+						align-items: center
+						justify-content: center
+						height: 100%
+						color: $white
+						font-size: 24/16*1rem
+						font-weight: 800
+						line-height: 20px
+					.wrap-content
+						position: absolute
+						bottom: 100%
+						min-width: 300px
+						height: 158px
+						width: 100%
+						padding-left: 20px
+						.subtitle
+							font-size: 24/16*1rem
+							font-weight: 800
+							line-height: 20px
+							padding-bottom: 20px
+						.content
+							p
+								font-size: 14/16*1rem
+								line-height: 20px
+						&::before,
+						&::after
+							position: absolute
+							left: -5px
+							width: 7px
+							height: 7px
+							border-radius: 50%
+							content: ''
+						&::after
+							top: 100%
+				&::after
+					position: absolute
+					top: 0
+					left: 100%
+					display: inline-block
+					content: ""
+				&::before
+					position: absolute
+					top: 50%
+					right: -52.5px
+					transform: translateY(-37%)
+					content: ""
+					width: 32px
+					height: 3px
+			&:nth-child(1)
+				.swiper-inner
+					background: #ff390c
+					.item-box
+						.wrap-content
+							border-left: solid 3px #ff390c
+							&::before,
+							&::after
+								background: #ff390c
+					&::after
+						border-top: 22.5px solid transparent
+						border-right: 0
+						border-bottom: 22.5px solid transparent
+						border-left: 22.5px solid #ff390c
+					&::before
+						background: #ff390c
+
+			&:nth-child(2)
+				.swiper-inner
+					background: #ff8000
+					.item-box
+						.wrap-content
+							border-left: solid 3px #ff8000
+							&::before,
+							&::after
+								background: #ff8000
+					&::after
+						border-top: 22.5px solid transparent
+						border-right: 0
+						border-bottom: 22.5px solid transparent
+						border-left: 22.5px solid #ff8000
+					&::before
+						background: #ff8000
+			&:nth-child(3)
+				.swiper-inner
+					background: #00cc60
+					.item-box
+						.wrap-content
+							border-left: solid 3px #00cc60
+							&::before,
+							&::after
+								background: #00cc60
+					&::after
+						border-top: 22.5px solid transparent
+						border-right: 0
+						border-bottom: 22.5px solid transparent
+						border-left: 22.5px solid #00cc60
+					&::before
+						background: #00cc60
+			&:nth-child(4)
+				.swiper-inner
+					background: #3d3d3d
+					.item-box
+						.wrap-content
+							border-left: solid 3px #3d3d3d
+							&::before,
+							&::after
+								background: #3d3d3d
+					&::after
+						border-top: 22.5px solid transparent
+						border-right: 0
+						border-bottom: 22.5px solid transparent
+						border-left: 22.5px solid #3d3d3d
+					&::before
+						background: #3d3d3d
+			&:nth-child(5)
+				.swiper-inner
+					background: #0682ff
+					.item-box
+						.wrap-content
+							border-left: solid 3px #0682ff
+							&::before,
+							&::after
+								background: #0682ff
+					&::after
+						border-top: 22.5px solid transparent
+						border-right: 0
+						border-bottom: 22.5px solid transparent
+						border-left: 22.5px solid #0682ff
+					&::before
+						background: #0682ff
+			&:nth-child(6)
+				.swiper-inner
+					background: #8d45b5
+					.item-box
+						.wrap-content
+							min-width: 230px
+							border-left: solid 3px #8d45b5
+							&::before,
+							&::after
+								background: #8d45b5
+					&::after
+						border-top: 22.5px solid transparent
+						border-right: 0
+						border-bottom: 22.5px solid transparent
+						border-left: 22.5px solid #8d45b5
+					&::before
+						background: #8d45b5
+						width: 68px
+						right: -88.5px
+			&:nth-child(even)
+				.swiper-inner
+					.item-box
+						.wrap-content
+							bottom: unset
+							top: 100%
+							margin-top: 47px
+			&:nth-child(odd)
+				.swiper-inner
+					.item-box
+						.wrap-content
+							margin-bottom: 47px
+		.swiper-button-next,
+		.swiper-button-prev
+			top: 30px
+			&::before
+				color: $main
+				font-size: 30/16*1rem
+		.swiper-button-prev
+			left: 95%
+	@media screen and ( max-width: 1199.98px )
+		.wrapper-history
+			.swiper-button-prev
+				left: 90%
+	@media screen and ( max-width: 991.98px )
+		padding: 15px 0
+		.wrapper-history
+			padding: 230px 0
+			.swiper-slide
+				max-width: unset
+				.swiper-inner
+					width: 100%
+					&::after,
+					&::before
+						display: none
+	@media screen and ( max-width: 767.98px )
+		.wrapper-history
+			min-height: 100%
+			padding: 0
+			.swiper-slide
+				.swiper-inner
+					height: auto
+					.item-box
+						display: flex
+						flex-direction: column-reverse
+						.title
+							display: none
+						.wrap-content
+							position: relative
+							display: flex
+							flex-direction: column
+							justify-content: center
+							.subtitle,
+							.content
+								color: $white
+							&::after,
+							&::before
+								display: none
+
+				&:nth-child(even)
+					.swiper-inner
+						.item-box
+							.wrap-content
+								bottom: unset
+								top: unset
+								margin-top: 0
+				&:nth-child(odd)
+					.swiper-inner
+						.item-box
+							.wrap-content
+								bottom: unset
+								top: unset
+								margin-bottom: 0
+			.swiper-button-next,
+			.swiper-button-prev
+				&::before
+					color: $white

@@ -1,0 +1,57 @@
+.about-1
+	padding-top: 40px
+	margin-top: 16px
+	background-position: top !important
+	.section-title
+		max-width: 690px
+		margin: 0 auto
+		line-height: 1.2
+		letter-spacing: 0.05px
+		text-align: center
+	.wrap-content
+		max-width: 1020px
+		margin: 0 auto
+		.desc
+			p
+				text-align: center
+				font-size: 1rem
+				color: $text
+				padding-bottom: 25px
+				line-height: 20px
+				&:first-child
+					font-size: 18/16*1rem
+					line-height: 22px
+					color: $gray
+					font-weight: 700
+	.wrap-img
+		border-radius: 5px
+		position: relative
+		a
+			+img-ratio(690/1230)
+			img
+				border-radius: 5px
+			.icon
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 51px
+				height: 41px
+				z-index: 3
+				transform: translate(-50%, -50%)
+		&::before
+			position: absolute
+			content: ''
+			width: 100%
+			height: 100%
+			border-radius: 5px
+			z-index: 2
+			pointer-events: none
+			background: rgba($color: $black, $alpha: .5)
+	@media screen and ( max-width: 991.98px )
+		padding-top: 10px
+		.section-title
+			padding-bottom: 20px
+		.wrap-content
+			.desc
+				p
+					padding-bottom: 15px

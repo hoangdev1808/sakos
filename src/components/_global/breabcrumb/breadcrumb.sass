@@ -1,0 +1,34 @@
+.breadcrumb-wrapper
+	width: 100%
+	background-color: $white
+	.breadcrumb
+		height: 40px
+		display: flex
+		align-items: center
+		background-color: transparent
+		flex-wrap: wrap
+		list-style: none
+		margin-bottom: 0
+		padding: 0px
+		li
+			position: relative
+			display: flex
+			align-items: center
+			color: $gray
+			font-size: 18px
+			& + li
+				margin-left: 23px
+			&.active,
+			&:hover
+				a
+					color: $black
+
+		li+li 
+			&::before
+				position: absolute
+				top: 50%
+				left: -15px
+				transform: translateY(-50%)
+				content: '/'
+				font-size: 18/16*1rem
+				color: #999999
