@@ -81,3 +81,25 @@
 		display: none
 		&.active
 			display: block
+
+.option
+	width: 46px
+	height: 38px
+	position: absolute
+	&.black
+		right: 0
+		top: 0
+		background: url(../img/icons/bg-black.png)
+	&.red
+		left: 0
+		top: 0
+		background: url(../img/icons/bg-red.png)
+	.inner
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		font-size: 12px
+		text-transform: uppercase
+		color: $white
+		font-weight: bold

@@ -185,8 +185,8 @@ const initSwiper = () => {
 			},
 		},
 	});
-	let historySlide = new Swiper(".wrapper-history .swiper-container", {
-		loop: false,
+	let otherNews = new Swiper(".swiper-discount-other .swiper-container", {
+		loop: true,
 		speed: 2000,
 		spaceBetween: 30,
 		observer: true,
@@ -227,6 +227,8 @@ const checkLayoutBanner = () => {
 	if (mainBanner.length >= 1) {
 		$("main").css("padding-top", heightHeader);
 	} else if (pagesBanner.length >= 1) {
+		$("main").css("padding-top", heightHeader);
+	} else {
 		$("main").css("padding-top", heightHeader);
 	}
 };
@@ -327,6 +329,26 @@ const crollToDiv = () => {
 		window.addEventListener("scroll", function () {
 			let bannerheight = $('#pagebanner').outerHeight();
 			let headerHeight = $('header').outerHeight();
+			const tabPanel = () => {
+				$(".support-page .wrap-right ul li .title").on("click", function (e) {
+					var t = $(this).closest("li").find(".content");
+					$(this)
+						.closest(".support-page .wrap-right ul")
+						.find(".content")
+						.not(t)
+						.slideUp();
+					$(this).hasClass("active") ?
+						$(this).removeClass("active") :
+						($(this)
+							.closest(".support-page .wrap-right ul")
+							.find(".title.active")
+							.removeClass("active"),
+							$(this).addClass("active")),
+						t.stop(!1, !0).slideToggle(),
+						e.preventDefault();
+				})
+			}
+			/*==================== INIT MAPPING ====================*/
 
 			if (window.pageYOffset > bannerheight && $('#about-page').length >= 1) {
 				$(".catelogry").css({
@@ -372,6 +394,8 @@ $(document).ready(function () {
 	setBackgroundElement();
 	crollToDiv();
 	accordianTable()
+	tabPanel();
+
 	/*==================== LIST TAB =========================*/
 	var theTabs = $(".nav-tabs li");
 	var i;

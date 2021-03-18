@@ -1,0 +1,71 @@
+section.section.page-discount-detail
+	.container 
+		.row 
+			.col-md-10.col-12.mx-auto 
+				.wrap-top 
+					.section-title Hè rực nắng vàng - Rộn ràng ưu đãi
+				.wrap-bottom 
+					.date 
+						.color-text Ngày đăng : &nbsp;
+						time 16.12.2020
+					.social 
+						.color-text Chia sẻ : &nbsp;
+						a(href="").face
+							img(src="./img/news/face.png", alt="") 
+						a(href="").zalo
+							img(src="./img/news/zalo.png", alt="")
+				.fullcontent 
+					p Thời gian áp dụng: Đến hết 20/06/2020
+					p Phạm vi áp dụng: Mua hàng trực tiếp trên kênh Online (Website/ Fanpage/ Hotline)
+section.discount-brand 
+	.container
+		.brand 
+			.brand__header
+				.f-24.fw-700 Danh mục sản phẩm khuyến mãi
+			.brand__body
+				.row 
+					-for(i=0; i<8; i++)
+						.col-lg-3.col-md-6.col-6
+							.brand-item 
+								.option.red
+									.inner mới
+								.option.black
+									.inner -15%
+								.big-img
+									a.img(href="")
+										img.lazyload(data-src="./img/km-ct/1.png", alt="")
+								.sm-box 
+									.sm-img
+										img.lazyload(data-src="./img/km-ct/22.png", alt="") 
+									.sm-img.active
+										img.lazyload(data-src="./img/km-ct/23.png", alt="")
+								.title 
+									a(href="") Cặp Doanh Nhân Legend 04
+								.wrap-price 
+									.price
+										.priceold 2.500.000 VND
+										.pricesale 1.990.000 VND
+									.order 
+										a(href="").btn.btn-order Mua ngay
+			.btn.btn-view-all 
+				span Xem thêm
+				.material-icons keyboard_arrow_down
+section.section.discount-other
+	.container
+		.section-title Khuyến mãi khác
+		.swiper-discount-other
+			.swiper-container 
+				.swiper-wrapper
+					-for(i=0; i<6; i++)
+						.swiper-slide
+							.item.zoom-img
+								.img
+									a(href="") 
+										img.lazyload(data-src="./img/home/news-1.png" alt="")
+								.content 
+									time 16.12.2020
+									.title 
+										a(href="").lcl.lcl-2 Tại sao bất kỳ ai cũng nên cần một chiếc vali kéo vải?
+									a.item-view-more(href="") Xem thêm
+			.swiper-button-next
+			.swiper-button-prev

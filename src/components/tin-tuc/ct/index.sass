@@ -1,0 +1,84 @@
+.news-detail-page
+	time
+		color: $gray
+		font-size: 12px
+		line-height: 1.7
+	.section-title
+		font-size: r(30px)
+		text-align: left
+		border-bottom: thin solid $main
+		letter-spacing: normal
+	.wrap-bottom
+		display: flex
+		padding: 10px 0 
+		align-items: center
+		@media screen and ( max-width: 580px )
+			display: block
+		.date,
+		.social
+			display: flex
+			align-items: center
+		.date
+			position: relative
+			&::before
+				content: ""
+				position: absolute
+				height: 100%
+				width: 1px
+				background-color: $main
+				top: 0
+				right: -15px
+		.social
+			padding-left: r(30px)
+			@media screen and ( max-width: 580px )
+				padding-left: 0
+				padding-top: 10px
+
+			a
+				&:not(:last-child)
+					margin-right: 20px
+	.wrap-content
+		padding-bottom: r(30px)
+		*
+			margin-bottom: r(30px)
+		img
+			widht: 100%
+			margin: 0 auto
+	.wrap-right-main
+		@media screen and ( max-width: 991.9px )
+			margin-top: r(30px)
+	.wrap-comment
+		border-top: 1px solid  #e1e1e1
+		.section-title
+			border: 0
+			padding-top: r(20px)
+.news-other
+	.section-title
+		font-size: r(24px)
+		margin: r(30px) 0
+		padding: 0
+		border-bottom: 0
+	.wrap-item
+		margin-bottom: r(30px)
+		.item
+			display: flex
+			a
+				display: block
+			.img
+				+img-ratio(100/180)
+				flex: 0 0 180px
+				padding-top: 27%
+			.wrap-item__content
+				display: flex
+				flex-direction: column
+				justify-content: center
+				padding-left: r(15px)
+				.title
+					transition: .3s all ease-in-out
+					&:hover
+						color: $main
+	.wrap-item-2
+		&:not(:last-child)
+			margin-bottom: r(30px)
+		.img
+			+img-ratio(550/390)
