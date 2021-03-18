@@ -213,6 +213,93 @@ const initSwiper = () => {
 			},
 		},
 	});
+	let b2b_7 = new Swiper(".swiper-b2b-7 .swiper-container", {
+		loop: true,
+		speed: 2000,
+		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".swiper-b2b-7 .swiper-button-next",
+			prevEl: ".swiper-b2b-7 .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 10,
+				slidesPerView: 2,
+			},
+			768: {
+				spaceBetween: 10,
+				slidesPerView: 3,
+			},
+			1024: {
+				spaceBetween: 10,
+				slidesPerView: 4,
+			},
+			1280: {
+				spaceBetween: 10,
+				slidesPerView: 5,
+			},
+		},
+	});
+	let b2b_8 = new Swiper(".swiper-b2b-8 .swiper-container", {
+		loop: true,
+		speed: 2000,
+		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".swiper-b2b-8 .swiper-button-next",
+			prevEl: ".swiper-b2b-8 .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			375: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			575: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+			1280: {
+				spaceBetween: 30,
+				slidesPerView: 6,
+			},
+		},
+	});
+	let b2b_6 = new Swiper(".swiper-b2b-6 .swiper-container", {
+		loop: true,
+		speed: 2000,
+		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".swiper-b2b-6 .swiper-button-next",
+			prevEl: ".swiper-b2b-6 .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			375: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+		},
+	});
 }
 // ===========================CHECK BANNER=========================//
 const checkLayoutBanner = () => {
@@ -380,6 +467,43 @@ const accordianTable = () => {
 		$(this).next().find('.demo').slideToggle()
 	})
 }
+/*==================== Tabs ===================*/
+const tabPanel = () => {
+	$(".support-page .wrap-right ul li .title").on("click", function(e) {
+		var t = $(this).closest("li").find(".content");
+		$(this)
+			.closest(".support-page .wrap-right ul")
+			.find(".content")
+			.not(t)
+			.slideUp();
+		$(this).hasClass("active")
+			? $(this).removeClass("active")
+			: ($(this)
+					.closest(".support-page .wrap-right ul")
+					.find(".title.active")
+					.removeClass("active"),
+			  $(this).addClass("active")),
+			t.stop(!1, !0).slideToggle(),
+			e.preventDefault();
+	})
+} 
+/*==================== Button View More ===================*/
+const moveBtn = () => {
+	let btn = $(".view-all");
+	if($("body").has("#pagebanner")) {
+		btn.appendTo(".banner-wrap");
+	} else {
+		console.log(2)
+	}
+}
+/*==================== Scroll To Div ===================*/
+const scrollToDiv = () => {
+	$(".view-all .btn-view-all").click(function() {
+		$('html,body').animate({
+			scrollTop: $(".b2b-9").offset().top
+		},800);
+	});
+}
 /*==================== LOAD FUNCTION ====================*/
 $(document).ready(function () {
 	scrollTop();
@@ -388,9 +512,10 @@ $(document).ready(function () {
 	checkLayoutBanner();
 	setBackgroundElement();
 	crollToDiv();
+	scrollToDiv();
 	accordianTable()
 	tabPanel();
-
+	moveBtn();
 	/*==================== LIST TAB =========================*/
 	var theTabs = $(".nav-tabs li");
 	var i;
