@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'Trang chu'
+	- var bodyClass = 'homepage'
+
+block main
+	include ../components/_global/nav-list/_navzone.pug
+	include ../components/_global/breabcrumb/breadcrumb.pug
+	include ../components/san-pham/detail.pug

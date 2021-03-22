@@ -119,6 +119,39 @@ const initSwiper = () => {
 			},
 		},
 	});
+	let historySlide = new Swiper(".wrapper-history .swiper-container", {
+		loop: false,
+		speed: 2000,
+		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".wrapper-history .swiper-button-next",
+			prevEl: ".wrapper-history .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			375: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			575: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+			},
+			1280: {
+				spaceBetween: 30,
+				slidesPerView: 6,
+			},
+		},
+	});
 	let experienceHome = new Swiper(".wrapper-slide .swiper-container", {
 		loop: true,
 		speed: 2000,
@@ -211,6 +244,60 @@ const initSwiper = () => {
 				spaceBetween: 30,
 				slidesPerView: 3,
 			},
+		},
+	});
+	let galleryThumbs = new Swiper('.wrap-slide-detail .gallery-thumbs', {
+		direction: 'vertical',
+		spaceBetween: 25,
+		slidesPerView: 5,
+		loopedSlides: 5,
+		loop: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			320: {
+				direction: 'horizontal',
+				slidesPerView: 2,
+				spaceBetween: 10
+			},
+			376: {
+				direction: 'horizontal',
+				slidesPerView: 3,
+				spaceBetween: 10
+			},
+			576: {
+				direction: 'horizontal',
+				slidesPerView: 3,
+				spaceBetween: 10
+			},
+			768: {
+				direction: 'horizontal',
+				slidesPerView: 4,
+				spaceBetween: 10
+			},
+			1025: {
+				slidesPerView: 4,
+			},
+			1200: {
+				slidesPerView: 5,
+			},
+		},
+	});
+	let galleryTop = new Swiper('.wrap-slide-detail .gallery-top', {
+		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
+		loop: true,
+		navigation: {
+			nextEl: '.gallery-top .swiper-button-next',
+			prevEl: '.gallery-top .swiper-button-prev',
+		},
+		pagination: {
+			el: '.gallery-thumbs .swiper-pagination',
+			clickable: true,
+		},
+		thumbs: {
+			swiper: galleryThumbs,
 		},
 	});
 }
@@ -376,8 +463,41 @@ const crollToDiv = () => {
 
 /*==================== ACCORDIAN ===================*/
 const accordianTable = () => {
-	$('#toggle').on('click', function () {
-		$(this).next().find('.demo').slideToggle()
+	$('.toggle').on('click', function () {
+		$(this).toggleClass('active')
+		$(this).next().find('.wrap-content').slideToggle();
+		$(this).find('.title em').toggleClass('active')
+		$('.toggle').not(this).next().find('.wrap-content').slideUp();
+		$('.toggle').not(this).find('.title em').removeClass('active');
+		$('.toggle').not(this).removeClass('active');
+	});
+	$('.btn-view').on('click', function () {
+		$(this).parent().find('.wrap-content').slideToggle();
+		$('.btn-view').not(this).parent().find('.wrap-content').slideUp()
+	})
+}
+const accordianList = () => {
+	$('.accordion-title em').on('click', function (e) {
+		let $this = $(this);
+		e.preventDefault();
+		if ($this.parent().next().hasClass('show')) {
+			$this.parent().next().removeClass('show');
+			$this.parent().next().slideUp(350);
+			$this.parents().removeClass('active');
+		} else {
+			$this.parent().parents().find('.nav-sub').removeClass('show');
+			$this.parent().parents().find('.nav-sub').slideUp(350);
+			$this.parent().parents().find('li').removeClass('active');
+			$this.parent().next().toggleClass('show');
+			$this.parent().next().slideDown(350);
+			$this.parents('li').addClass('active');
+		}
+	});
+	$('.btn-dropdown').on('click', function () {
+		$(this).toggleClass('active');
+		$(this).parent().next().slideToggle();
+		$('.btn-dropdown').not(this).parent().next().slideUp();
+		$('.btn-dropdown').not(this).removeClass('active')
 	})
 }
 /*==================== LOAD FUNCTION ====================*/
@@ -388,8 +508,8 @@ $(document).ready(function () {
 	checkLayoutBanner();
 	setBackgroundElement();
 	crollToDiv();
-	accordianTable()
-	tabPanel();
+	accordianTable();
+	accordianList();
 
 	/*==================== LIST TAB =========================*/
 	var theTabs = $(".nav-tabs li");
@@ -417,4 +537,25 @@ $(document).ready(function () {
 	for (i = 0; i < theTabs.length; i++) {
 		theTabs[i].addEventListener("click", theTabClicks)
 	}
+	$(function () {
+		$("#slider").slider({
+			range: "min",
+			value: 500000,
+			min: 0,
+			max: 15000000,
+			step: 500000,
+			slide: function (event, ui) {
+				$(ui.handle).find('.tooltip').text(ui.value + " VND");
+				$("#amount").val(ui.value + "VND");
+			},
+			create: function (event, ui) {
+				var tooltip = $('<div class="tooltip" />');
+				$(event.target).find('.ui-slider-handle').append(tooltip);
+			},
+			change: function (event, ui) {
+				$('#hidden').attr('value', ui.value);
+			}
+		});
+		$("#amount").val($("#slider").slider("value") + "đ");
+	});
 });

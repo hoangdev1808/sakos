@@ -87,18 +87,22 @@
 	height: 38px
 	position: absolute
 	&.black
-		right: 0
+		right: 10px
 		top: 0
+		display: flex
+		align-items: center
+		justify-content: center
 		background: url(../img/icons/bg-black.png)
 	&.red
-		left: 0
+		left: 10px
 		top: 0
+		display: flex
+		align-items: center
+		justify-content: center
 		background: url(../img/icons/bg-red.png)
+		background-size: 100% 100%
+		background-position: center
 	.inner
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%, -50%)
 		font-size: 12px
 		text-transform: uppercase
 		color: $white

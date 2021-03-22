@@ -1,0 +1,304 @@
+.product-list
+	.side-navigation-wrapper
+		.section-title
+			padding-bottom: 20px
+			border-bottom: solid 1px $gray
+			h1
+				font-size: r(24px)
+				font-weight: 800
+				line-height: 18px
+				letter-spacing: 0.05px
+			@media screen and ( max-width: 992px )
+				display: flex
+				align-items: center
+				justify-content: space-between
+		.side-navigation
+			li
+				padding: 15px 0
+				border-bottom: solid 1px $gray
+				.accordion-title
+					display: flex
+					align-items: center
+					justify-content: space-between
+					a
+						font-weight: 700
+					em
+						cursor: pointer
+						font-size: r(16px)
+						transition: all .5s
+				.nav-sub
+					display: none
+					padding-left: 25px
+					li
+						padding: 7px 0
+						border-bottom: none
+					&.show
+				&.active
+					.accordion-title
+						a
+							color: $main
+						em
+							transform: rotate(180deg)
+			@media screen and ( max-width: 991.98px )
+				display: none
+	.side-filter
+		margin-top: 53px
+		.section-title
+			font-size: r(24px)
+			font-weight: 800
+			line-height: 18px
+			letter-spacing: 0.05px
+			padding-bottom: 18px
+			border-bottom: solid 1px $text
+		.filter-wrap
+			padding: 15px 0
+			border-bottom: solid 1px $text
+			.filter-title
+				font-weight: 700
+			.filter-option
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				width: 100%
+				padding-top: 17px
+				.btn
+					margin-bottom: 10px
+					+ .btn
+						margin-left: 10px
+				ul
+					display: flex
+					align-items: center
+					li
+						a
+							display: block
+							span
+								display: block
+								width: 15px
+								height: 15px
+								border-radius: 50%
+						+ li
+							margin-left: 12px
+						&.active
+							a
+								border-radius: 50%
+								border: solid 2px $text
+								span
+									border: solid 2px $white
+						&:first-child
+							a
+								span
+									background: #707070
+						&:nth-child(2)
+							a
+								span
+									background: #9e0b0f
+						&:nth-child(3)
+							a
+								span
+									background: #005e20
+						&:nth-child(4)
+							a
+								span
+									background: #2e3192
+						&:nth-child(5)
+							a
+								span
+									background: #111111
+						&:nth-child(6)
+							a
+								span
+									background: #8560a8
+						&:last-child
+							a
+								span
+									background: #7b6a57
+				.ui-slider
+					width: 100%
+					margin-top: 17px
+					height: 3.18px
+					background: #eaeaea
+					&.ui-widget.ui-widget-content
+						border: solid 1px transparent !important
+					.ui-slider-range
+						background: $main
+					.ui-slider-handle
+						position: relative
+						&.ui-corner-all
+							width: 10px
+							height: 10px
+							display: block
+							border-radius: 50%
+							background: $main
+							&:focus
+								outline: none
+						.tooltip
+							position: absolute
+							display: block
+							top: -23px
+							width: 100px
+							height: 29px
+							color: $main
+							font-size: r(14px)
+							&:focus
+								outline: none
+				.filter-label
+					width: 100%
+					margin-top: 10px
+					display: flex
+					justify-content: space-between
+					label
+						color: $main
+						font-size: r(14px)
+			&:nth-child(3)
+				.filter-option
+					.btn
+						&-filter
+							flex: 1
+							width: 30%
+
+			&:nth-child(5)
+				.filter-option
+					.btn
+						&:nth-child(2n-1)
+							margin-left: 0
+	@media screen and ( max-width: 1199.98px )
+		.side-filter
+			margin-top: 30px
+			.section-title
+				font-size: r(20px)
+			.filter-wrap
+				.filter-option
+					.btn
+						&-filter
+							flex: 1 0 100%
+						+ .btn
+							margin-left: 0
+				&:nth-child(3)
+					.filter-option
+						.btn
+							&-filter
+								flex: 1 0 100%
+								width: 100%
+	@media screen and ( max-width: 991.98px )
+		.side-filter
+			margin-bottom: 30px
+			.section-title
+				display: flex
+				align-items: center
+				justify-content: space-between
+			.filter-wrap
+				.filter-title
+					display: flex
+					align-items: center
+					justify-content: space-between
+				.filter-option
+					display: none
+
+	.hero-product
+		.block_name_category
+			padding-bottom: 14px
+			margin-bottom: 49px
+			align-items: center
+			justify-content: space-between
+			border-bottom: solid 1px $gray
+			.name_category
+				h2
+					line-height: 18px
+					font-weight: 400
+					font-size: r(16px)
+					color: $gray-2
+			.wrap-left
+				.option-wrap,
+				.sort-wrap
+					p
+						line-height: 18px
+						color: $gray-2
+					select
+						width: max-content
+						padding-left: 15px
+						border: none
+						font-weight: 700
+						background: transparent
+				.option-wrap
+					padding-right: 20px
+					position: relative
+					&::after
+						position: absolute
+						top: 0
+						right: 0
+						content: '|'
+				.sort-wrap
+					padding-left: 20px
+		.product-item
+			position: relative
+			margin-bottom: 30px
+			.pro-img
+				width: 134px
+				margin: 0 auto
+				a
+					+img-scale(2)
+			ul
+				display: flex
+				align-items: center
+				justify-content: center
+				margin-bottom: 30px
+				li
+					width: 40px
+					height: 40px
+					display: flex
+					align-items: center
+					justify-content: center
+					background: #f8f8f8
+					border: solid 1px #eaeaea
+					a
+						width: 100%
+						display: inline-block
+						+img-scale(.6)
+					+ li
+						margin-left: 10px
+					&.active
+						border: solid 1px $main
+			.pro-infor
+				padding: 0 10px
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				.pro-title
+					display: flex
+					justify-content: center
+					padding-bottom: 8px
+				.pro-price
+					justify-content: space-between
+					.price
+						.priceold
+							color: $gray
+							text-decoration: line-through
+						.pricesale
+							font-size: r(18px)
+							font-weight: 700
+							letter-spacing: 0.05px
+	@media screen and ( max-width: 1199.98px )
+		.hero-product
+			.product-item
+				.pro-img
+					width: 115px
+				.pro-infor
+					.pro-title
+						font-size: r(14px)
+					.pro-price
+						.price
+							.priceold
+								font-size: r(13px)
+							.pricesale
+								font-size: r(14px)
+						.order
+							.btn-order
+								padding: 5px
+	@media screen and ( max-width: 991.98px )
+		.hero-product
+			.block_name_category
+				.wrap-left
+					.option-wrap,
+					.sort-wrap
+						select
+							padding-left: 0

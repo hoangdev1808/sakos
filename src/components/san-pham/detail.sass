@@ -1,0 +1,272 @@
+.detail-1
+	.wrap-slide-detail
+		display: flex
+		align-items: center
+		width: 100%
+		height: 550px
+		.gallery-thumbs
+			width: 85px
+			height: 100%
+			.swiper-inner
+				width: 100%
+				height: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				border: solid 1px #e1e1e1
+				border-radius: 5px
+				.img
+					width: 100%
+					a
+						+img-scale(.78)
+		.gallery-top
+			width: 570px
+			height: 100%
+			.swiper-inner
+				position: relative
+				width: 100%
+				height: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				border: solid 1px #e1e1e1
+				border-radius: 5px
+				.option
+					top: 10px
+					right: 10px
+					left: auto
+					width: 70px
+					height: 58px
+					.inner
+						font-size: 1rem
+						font-weight: 800
+					&.red
+						background-image: url('../img/icons/bg-red-big.png')
+				.img
+					width: 100%
+					a
+						+img-scale(.727)
+			.swiper-button-next,
+			.swiper-button-prev
+				&::before
+					color: $gray
+					font-size: r(40px)
+			.swiper-button-next
+				right: 20px
+			.swiper-button-prev
+				left: 20px
+	.pro-infor-wrap
+		.block-name
+			padding-bottom: 12px
+			border-bottom: solid 1px #e1e1e1
+			.title
+				font-size: r(30px)
+				font-weight: 400
+				line-height: 23px
+				padding-bottom: 12px
+			.core-pro
+				font-size: r(14px)
+				color: $gray
+				padding-bottom: 10px
+			.pro-price
+				padding-bottom: 7px
+				.old-price
+					text-decoration: line-through
+					color: $gray
+				.net-price
+					color: $main
+					font-size: r(20px)
+					font-weight: 800
+					margin-left: 17px
+		.block-filter
+			padding-top: 23px
+			border-bottom: solid 1px #e1e1e1
+			table
+				tr
+					line-height: 50px
+					td
+						&:first-child
+							font-weight: 700
+							color: $black
+						&:last-child
+							padding-left: 70px
+							display: flex
+							align-items: center
+							height: 50px
+							a
+								.img
+									width: 40px
+									height: 40px
+									display: flex
+									align-items: center
+									justify-content: center
+									background: #f8f8f8
+									border: solid 1px #eaeaea
+								+ a
+									margin-left: 10px
+								&.btn-filter
+									height: 30px
+									display: flex
+									align-items: center
+									justify-content: center
+		.block-card
+			border-bottom: solid 1px #e1e1e1
+			padding-top: 20px
+			padding-bottom: 20px
+			.item-quantity
+				display: flex
+				align-items: center
+				.input-group
+					display: flex
+					align-items: center
+					.input-group-btn
+						.btn-number
+							cursor: pointer
+							width: 30px
+							height: 30px
+							display: flex
+							align-items: center
+							justify-content: center
+							border-radius: 50%
+							background: #e1e1e1
+					.input-number
+						width: 40px
+						height: 40px
+						margin: 0 10px
+						font-size: r(18px)
+						text-align: center
+						border-radius: 5px
+						border: solid 1px #e1e1e1
+				.pro-price
+					display: flex
+					align-items: center
+					margin-left: 24px
+					.old-price
+						font-size: r(12px)
+						color: $gray
+						text-decoration: line-through
+					.net-price
+						font-size: r(15px)
+						font-weight: 700
+						margin-left: 20px
+			.add-shopping-cart
+				padding-top: 20px
+				.add-card
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 100%
+					height: 50px
+					border-radius: 5px
+					border: solid 1px transparent
+					transition: all .5s
+					background: $main
+					font-size: 1rem
+					color: $white
+					line-height: 24px
+					text-transform: uppercase
+					em
+						margin-right: 22px
+					@media screen and ( min-width: 992px )
+						&:hover
+							background: transparent
+							border: solid 1px $main
+							color: $main
+		.block-share
+			display: flex
+			align-items: center
+			padding-top: 14px
+			.text
+				line-height: 40px
+				font-weight: 700
+			a
+				margin-left: 25px
+.detail-2
+	.hero-list
+		width: 100%
+		.item
+			margin-left: auto
+			.text
+				font-size: r(18px)
+				line-height: 40px
+				font-weight: 600
+				letter-spacing: -0.02px
+				margin-left: 12px
+			&:first-child
+				margin-left: 0
+.detail-3
+	.hero-infor
+		.title
+			font-size: r(30px)
+			color: $black
+			font-weight: 400
+			padding-bottom: 34px
+		table
+			width: 100%
+			border-collapse: collapse
+			border: solid 1px #e1e1e1
+			tr
+				line-height: 50px
+				border: solid 1px #e1e1e1
+				td
+					&:first-child
+						font-weight: 700
+						padding-left: 20px
+				&:first-child
+					border: none
+				&:last-child
+					border: none
+	.hero-img
+		width: 100%
+		height: 465px
+		padding-left: 105px
+		.img
+			position: relative
+			width: 944px
+			height: 465px
+			a
+				+img-ratio(465/944)
+				.icon
+					position: absolute
+					width: 51px
+					height: 41px
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+.detail-4
+	.section-title
+		h2
+			font-size: r(30px)
+			color: $black
+	.hero-list
+		.wrap-img
+			display: flex
+			align-items: center
+			justify-content: center
+			.img
+				width: 423px
+				+img-scale(.5)
+		.wrapper-content
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+			.title
+				font-size: r(18px)
+				font-weight: 800
+				color: $main
+				padding-bottom: 15px
+			.content
+				p
+					font-size: r(14px)
+					line-height: 20px
+					color: $text
+					padding-bottom: 30px
+		&:nth-child(odd)
+			margin-top: 60px
+			margin-bottom: 60px
+			.row
+				.col-lg-7
+					order: 2
+				.col-lg-5
+					order: 1

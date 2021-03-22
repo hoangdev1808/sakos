@@ -90,3 +90,43 @@
 				background: $main
 				color: $white
 				border: solid 1px transparent
+	&-order
+		border-radius: 5px
+		border: solid 1px $text
+		padding: 5px 16px
+		transition: all .5s
+		@media screen and ( min-width: 992px )
+			&:hover
+				border: solid 1px transparent
+				background: $main
+				color: $white
+	&-filter
+		flex: 1
+		width: 50%
+		padding: 5px 17px
+		border: solid 1px #eaeaea
+		border-radius: 5px
+		background: $white
+		transition: all .5s
+		@media screen and ( min-width: 992px )
+			&:hover
+				border: solid 1px transparent
+				background: $main
+				color: $white
+		&.active
+			border: solid 1px transparent
+			background: $main
+			color: $white
+.btn-dropdown
+	font-size: r(24px)
+	cursor: pointer
+	display: flex
+	align-items: cente
+	justify-content: center
+	em
+		transition: all .5s
+	&.active
+		em
+			transform: rotate(180deg)
+	@media screen and ( min-width: 992px )
+		display: none
