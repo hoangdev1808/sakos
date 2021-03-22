@@ -300,6 +300,93 @@ const initSwiper = () => {
 			swiper: galleryThumbs,
 		},
 	});
+	let b2b_8 = new Swiper(".swiper-b2b-8 .swiper-container", {
+		loop: true,
+		speed: 2000,
+		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".swiper-b2b-8 .swiper-button-next",
+			prevEl: ".swiper-b2b-8 .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			375: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			575: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+			1280: {
+				spaceBetween: 30,
+				slidesPerView: 6,
+			},
+		},
+	});
+	let b2b_7 = new Swiper(".swiper-b2b-7 .swiper-container", {
+		loop: true,
+		speed: 2000,
+		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".swiper-b2b-7 .swiper-button-next",
+			prevEl: ".swiper-b2b-7 .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 10,
+				slidesPerView: 2,
+			},
+			768: {
+				spaceBetween: 10,
+				slidesPerView: 3,
+			},
+			1024: {
+				spaceBetween: 10,
+				slidesPerView: 4,
+			},
+			1280: {
+				spaceBetween: 10,
+				slidesPerView: 5,
+			},
+		},
+	});
+	let b2b_6 = new Swiper(".swiper-b2b-6 .swiper-container", {
+		loop: true,
+		speed: 2000,
+		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".swiper-b2b-6 .swiper-button-next",
+			prevEl: ".swiper-b2b-6 .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			375: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+		},
+	});
 }
 // ===========================CHECK BANNER=========================//
 const checkLayoutBanner = () => {
@@ -549,6 +636,7 @@ $(document).ready(function () {
 	accordianTable()
 	tabPanel();
 	moveBtn();
+	accordianList()
 	/*==================== LIST TAB =========================*/
 	var theTabs = $(".nav-tabs li");
 	var i;
