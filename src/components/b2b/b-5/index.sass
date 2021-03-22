@@ -1,0 +1,57 @@
+.b2b-5
+	.wrap-box
+		display: flex
+		@media screen and ( max-width: 1023.9px )
+			flex-wrap: wrap
+		@media screen and ( max-width: 400px )
+			display: block
+		.item
+			position: relative
+			flex: 25%
+			border: 3px solid $white
+			border-radius: 25px
+			color: $white
+			text-align: center
+			padding: r(30px) r(40px)
+			z-index: 2
+			overflow: hidden
+			@media screen and ( max-width: 1023.9px )
+				flex: 0 0 50%
+			.title
+				font-size: r(18px)
+				font-weight: bold
+				margin-bottom: 15px
+			.img
+				margin-bottom: r(15px)
+				img
+					width: 60px
+					height: 60px
+					object-fit: contain
+					margin: 0 auto
+			&::before
+				content: ""
+				position: absolute
+				width: 40px
+				top: 50%
+				left: -35px
+				height: 40px
+				transform: rotate(45deg) translateY(-50%)
+				border: 3px solid $white
+				z-index: 1
+				background-color: $white
+			&:nth-child(1)
+				background-color: $text
+				&::before
+					display: none
+			&:nth-child(3)
+				background-color: $gray
+				@media screen and ( max-width: 1023.9px )
+					&::before
+						display: none
+			&:nth-child(2),
+			&:nth-child(4)
+				background-color: #9b0404
+				@media screen and ( max-width: 400px )
+					&::before
+						display: none
+					

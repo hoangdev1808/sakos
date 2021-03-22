@@ -500,6 +500,43 @@ const accordianList = () => {
 		$('.btn-dropdown').not(this).removeClass('active')
 	})
 }
+/*==================== Tabs ===================*/
+const tabPanel = () => {
+	$(".support-page .wrap-right ul li .title").on("click", function (e) {
+		var t = $(this).closest("li").find(".content");
+		$(this)
+			.closest(".support-page .wrap-right ul")
+			.find(".content")
+			.not(t)
+			.slideUp();
+		$(this).hasClass("active") ?
+			$(this).removeClass("active") :
+			($(this)
+				.closest(".support-page .wrap-right ul")
+				.find(".title.active")
+				.removeClass("active"),
+				$(this).addClass("active")),
+			t.stop(!1, !0).slideToggle(),
+			e.preventDefault();
+	})
+}
+/*==================== Button View More ===================*/
+const moveBtn = () => {
+	let btn = $(".view-all");
+	if ($("body").has("#pagebanner")) {
+		btn.appendTo(".banner-wrap");
+	} else {
+		console.log(2)
+	}
+}
+/*==================== Scroll To Div ===================*/
+const scrollToDiv = () => {
+	$(".view-all .btn-view-all").click(function () {
+		$('html,body').animate({
+			scrollTop: $(".b2b-9").offset().top
+		}, 800);
+	});
+}
 /*==================== LOAD FUNCTION ====================*/
 $(document).ready(function () {
 	scrollTop();
@@ -508,9 +545,10 @@ $(document).ready(function () {
 	checkLayoutBanner();
 	setBackgroundElement();
 	crollToDiv();
-	accordianTable();
-	accordianList();
-
+	scrollToDiv();
+	accordianTable()
+	tabPanel();
+	moveBtn();
 	/*==================== LIST TAB =========================*/
 	var theTabs = $(".nav-tabs li");
 	var i;

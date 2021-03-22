@@ -1,0 +1,27 @@
+.b2b-2
+	background-color: #f7f7f7
+	.box
+		display: flex
+		@media screen and ( max-width: 1023.9px )
+			display: block
+		.wrap-left
+			flex: 0 0 60%
+			@media screen and ( min-width: 1280px )
+				flex: 0 0 736px
+			@media screen and ( max-width: 1023.9px )
+				flex: 0 0 100%
+			.img
+				+img-ratio(425/736)
+		.wrap-right
+			padding-left: r(70px)
+			@media screen and ( max-width: 1023.9px )
+				padding-left: 0
+				padding-top: r(30px)
+			.desc
+				overflow: auto
+				@media screen and ( min-width: 1024px )
+					height: 200px
+				@media screen and ( min-width: 1280px )
+					height: 280px
+				@media screen and ( max-width: 1023.9px )
+					height: auto
