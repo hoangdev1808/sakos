@@ -1,11 +1,14 @@
 .home-feature
 	background: #f8f8f8
-	.wrapper-grid
-		display: grid
-		grid-gap: 10px
-		grid-template-columns: repeat(3,1fr)
+	.col-inner
 		.item
 			position: relative
+			border-radius: 5px
+			.img
+				border-radius: 5px
+				a
+					img
+						border-radius: 5px
 			.content
 				position: absolute
 				bottom: 23px
@@ -15,33 +18,116 @@
 					font-size: 24/16*1rem
 					color: $white
 					font-weight: 700
-			&:nth-child(1)
-				grid-column: 1 / 2
-				grid-row: 1/2
-				.img
-					a
-						+img-ratio(145/400)
+		.item + .item
+			margin-top: 10px
+	.col-lg-4
+		&:first-child
+			padding-right: 5px
+			.item
+				&:first-child
+					.img
+						a
+							+img-ratio(145/400)
+				&:last-child
+					.img
+						a
+							+img-ratio(255/400)
+		&:nth-child(2)
+			padding-left: 5px
+			padding-right: 5px
+			.item
+				&:first-child
+					.img
+						width: 100%
+						height: 255px
+						img
+							width: 100%
+							height: 100%
+
+				&:last-child
+					.img
+						height: 145px
+						width: 100%
+						img
+							width: 100%
+							height: 100%
+		&:nth-child(3)
+			padding-left: 5px
+			.img
+				height: 410px
+				width: 100%
+				img
+					width: 100%
+					height: 100%
+
+	@media screen and ( max-width: 1279.98px )
+		.col-lg-4
 			&:nth-child(2)
-				grid-column: 2 / 3
-				grid-row: 1/4
-				.img
-					a
-						+img-ratio(255/400)
+				.item
+					&:first-child
+						.img
+							height: 229.5px
+					&:last-child
+						.img
+							height: 130.5px
 			&:nth-child(3)
-				grid-column: 3 / 4
-				grid-row: 1/5
 				.img
-					a
-						+img-ratio(410/400)
-			&:nth-child(4)
-				grid-column: 1 / 2
-				grid-row: 2/5
+					height: 370px
+	@media screen and ( max-width: 1199.98px )
+		.col-lg-4
+			&:nth-child(2)
+				.item
+					&:first-child
+						.img
+							height: 191.23px
+					&:last-child
+						.img
+							height: 108.73px
+			&:nth-child(3)
 				.img
+					height: 309.96px
+	@media screen and ( max-width: 991.98px )
+		.col-inner
+			.item
+				.content
 					a
-						+img-ratio(255/400)
-			&:nth-child(5)
-				grid-column: 2 / 3
-				grid-row: 4/5
+						font-size: 1rem
+		.col-lg-4
+			&:nth-child(2)
+				.item
+					&:first-child
+						.img
+							height: 157.23px
+					&:last-child
+						.img
+							height: 89.41px
+			&:nth-child(3)
 				.img
-					a
-						+img-ratio(145/400)
+					height: 256.64px
+	@media screen and ( max-width: 767.98px )
+		.col-lg-4
+			&:first-child
+				padding-right: 5px
+			&:nth-child(2)
+				padding-left: 5px
+				padding-right: 15px
+				.item
+					&:first-child
+						.img
+							height: auto
+					&:last-child
+						.img
+							height: auto
+			&:nth-child(3)
+				margin-top: 10px
+				padding-left: 15px
+				.img
+					height: auto
+	@media screen and ( max-width: 575.98px )
+		.col-lg-4
+			&:first-child
+				padding-right: 15px
+			&:nth-child(2)
+				margin-top: 10px
+				padding-left: 15px
+				padding-right: 15px

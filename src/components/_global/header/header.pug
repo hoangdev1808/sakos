@@ -28,26 +28,36 @@ header
 							img(src="./img/icons/user.png" alt="")
 						ul.wrap.d-flex.align-center
 							li
-								a.text(href='') Đăng nhập /  
+								a.text(href='') Đăng nhập
 							li
-								a.text(href='')  Đăng ký
+								a.text(href='') Đăng ký
 					.shopping-card-toggle.d-flex.align-center
 						.icon
 							img(src="./img/icons/shop2.png" alt="")
 						span.quilt 05
 						.shopping-cart-wrapper
 							.head
-								.cart-quantity
-									span.material-icons shopping_cart
-									.cart-number.total-cart-items
-										span.item-quantity 0
+								//- .cart-quantity
+								//- 	span.material-icons shopping_cart
+								//- 	.cart-number.total-cart-items
+								//- 		span.item-quantity 0
 								.cart-number
 									p
 										| Tổng cộng:
 										span 0 ₫
 							.body
 								.scroll-wrapper.cartpanel
-							.btn-center(style='display: none;')
+									.cart-item
+										.image
+											a(href="") 
+												img.lazyload(data-src="./img/home/specail-1.png", alt="")
+										.caption
+											.title
+												a(href="") Balo laptop Stargo Heben
+												.price 1.990.000 VND 
+											.quantity Số lượng: 
+												span.number 1
+							.btn-center
 								a.btn.btn-primary(href='')
 									span Thanh toán 
 									em.lnr.lnr-arrow-right
@@ -69,7 +79,7 @@ header
 					li.nav-item
 						.title
 							a.nav-link.f-16.fw-700.text-uppercase(href="gioi-thieu.html") Giới thiệu
-					li.nav-item.mega
+					li.nav-item.mega#mega-product
 						.title
 							a.nav-link.f-16.fw-700.text-uppercase(href="san-pham.html") Sản phẩm
 							.btn-sub 
@@ -78,7 +88,7 @@ header
 							.turn-back 
 								em.ri-arrow-go-back-line
 							ul 
-								li.mega-item 
+								li.mega-item
 									.title
 										a.mega-link(href="") vali 
 										.btnsub 
@@ -94,10 +104,11 @@ header
 																img.lazyload(data-src="./img/home/mega-"+i+".png" alt="")
 											li
 												a(href="")  Balo du lịch
-												//- .product.d-flex
-												//- 	.img
-												//- 		a(href="") 
-												//- 			img.lazyload(data-src="./img/home/mega-1.png" alt="")
+												.product.d-flex
+													-for(i=1; i<4; i++)
+														.img
+															a(href="") 
+																img.lazyload(data-src="./img/home/mega-"+i+".png" alt="")
 											li
 												a(href="")  Balo laptop
 											li

@@ -100,23 +100,38 @@
 				border: solid 1px transparent
 				background: $main
 				color: $white
-	&-filter
-		flex: 1
-		width: 50%
-		padding: 5px 17px
-		border: solid 1px #eaeaea
+	&-search-2
+		width: 100%
+		height: 40px
+		border: solid 1px $main
+		color: $main
 		border-radius: 5px
-		background: $white
-		transition: all .5s
-		@media screen and ( min-width: 992px )
-			&:hover
-				border: solid 1px transparent
-				background: $main
-				color: $white
-		&.active
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: .3s all ease-in-out
+		&:hover
 			border: solid 1px transparent
-			background: $main
 			color: $white
+			background: $main
+	&-continue,
+	&-booling
+		width: 240px
+		height: 40px
+		border-radius: 5px
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 1rem
+		text-transform: uppercase
+		letter-spacing: 0.1px
+	&-continue
+		background: #f3f3f3
+		color: #444444
+	&-booling
+		background: $red
+		color: $white
+		margin-left: 28px
 .btn-dropdown
 	font-size: r(24px)
 	cursor: pointer

@@ -1,272 +1,541 @@
-.detail-1
-	.wrap-slide-detail
-		display: flex
-		align-items: center
-		width: 100%
-		height: 550px
-		.gallery-thumbs
-			width: 85px
-			height: 100%
-			.swiper-inner
-				width: 100%
+#product-detail-page
+	.detail-1
+		.wrap-slide-detail
+			display: flex
+			align-items: center
+			width: 100%
+			height: 550px
+			.gallery-thumbs
+				width: 85px
 				height: 100%
-				display: flex
-				align-items: center
-				justify-content: center
-				border: solid 1px #e1e1e1
-				border-radius: 5px
-				.img
+				.swiper-inner
 					width: 100%
-					a
-						+img-scale(.78)
-		.gallery-top
-			width: 570px
-			height: 100%
-			.swiper-inner
-				position: relative
-				width: 100%
-				height: 100%
-				display: flex
-				align-items: center
-				justify-content: center
-				border: solid 1px #e1e1e1
-				border-radius: 5px
-				.option
-					top: 10px
-					right: 10px
-					left: auto
-					width: 70px
-					height: 58px
-					.inner
-						font-size: 1rem
-						font-weight: 800
-					&.red
-						background-image: url('../img/icons/bg-red-big.png')
-				.img
-					width: 100%
-					a
-						+img-scale(.727)
-			.swiper-button-next,
-			.swiper-button-prev
-				&::before
-					color: $gray
-					font-size: r(40px)
-			.swiper-button-next
-				right: 20px
-			.swiper-button-prev
-				left: 20px
-	.pro-infor-wrap
-		.block-name
-			padding-bottom: 12px
-			border-bottom: solid 1px #e1e1e1
-			.title
-				font-size: r(30px)
-				font-weight: 400
-				line-height: 23px
-				padding-bottom: 12px
-			.core-pro
-				font-size: r(14px)
-				color: $gray
-				padding-bottom: 10px
-			.pro-price
-				padding-bottom: 7px
-				.old-price
-					text-decoration: line-through
-					color: $gray
-				.net-price
-					color: $main
-					font-size: r(20px)
-					font-weight: 800
-					margin-left: 17px
-		.block-filter
-			padding-top: 23px
-			border-bottom: solid 1px #e1e1e1
-			table
-				tr
-					line-height: 50px
-					td
-						&:first-child
-							font-weight: 700
-							color: $black
-						&:last-child
-							padding-left: 70px
-							display: flex
-							align-items: center
-							height: 50px
-							a
-								.img
-									width: 40px
-									height: 40px
-									display: flex
-									align-items: center
-									justify-content: center
-									background: #f8f8f8
-									border: solid 1px #eaeaea
-								+ a
-									margin-left: 10px
-								&.btn-filter
-									height: 30px
-									display: flex
-									align-items: center
-									justify-content: center
-		.block-card
-			border-bottom: solid 1px #e1e1e1
-			padding-top: 20px
-			padding-bottom: 20px
-			.item-quantity
-				display: flex
-				align-items: center
-				.input-group
-					display: flex
-					align-items: center
-					.input-group-btn
-						.btn-number
-							cursor: pointer
-							width: 30px
-							height: 30px
-							display: flex
-							align-items: center
-							justify-content: center
-							border-radius: 50%
-							background: #e1e1e1
-					.input-number
-						width: 40px
-						height: 40px
-						margin: 0 10px
-						font-size: r(18px)
-						text-align: center
-						border-radius: 5px
-						border: solid 1px #e1e1e1
-				.pro-price
-					display: flex
-					align-items: center
-					margin-left: 24px
-					.old-price
-						font-size: r(12px)
-						color: $gray
-						text-decoration: line-through
-					.net-price
-						font-size: r(15px)
-						font-weight: 700
-						margin-left: 20px
-			.add-shopping-cart
-				padding-top: 20px
-				.add-card
+					height: 100%
 					display: flex
 					align-items: center
 					justify-content: center
-					width: 100%
-					height: 50px
+					border: solid 1px #e1e1e1
 					border-radius: 5px
-					border: solid 1px transparent
-					transition: all .5s
-					background: $main
-					font-size: 1rem
-					color: $white
-					line-height: 24px
-					text-transform: uppercase
-					em
-						margin-right: 22px
-					@media screen and ( min-width: 992px )
-						&:hover
-							background: transparent
-							border: solid 1px $main
-							color: $main
-		.block-share
-			display: flex
-			align-items: center
-			padding-top: 14px
-			.text
-				line-height: 40px
-				font-weight: 700
-			a
-				margin-left: 25px
-.detail-2
-	.hero-list
-		width: 100%
-		.item
-			margin-left: auto
-			.text
-				font-size: r(18px)
-				line-height: 40px
-				font-weight: 600
-				letter-spacing: -0.02px
-				margin-left: 12px
-			&:first-child
-				margin-left: 0
-.detail-3
-	.hero-infor
-		.title
-			font-size: r(30px)
-			color: $black
-			font-weight: 400
-			padding-bottom: 34px
-		table
-			width: 100%
-			border-collapse: collapse
-			border: solid 1px #e1e1e1
-			tr
-				line-height: 50px
-				border: solid 1px #e1e1e1
-				td
-					&:first-child
-						font-weight: 700
-						padding-left: 20px
-				&:first-child
-					border: none
-				&:last-child
-					border: none
-	.hero-img
-		width: 100%
-		height: 465px
-		padding-left: 105px
-		.img
-			position: relative
-			width: 944px
-			height: 465px
-			a
-				+img-ratio(465/944)
-				.icon
-					position: absolute
-					width: 51px
-					height: 41px
-					top: 50%
-					left: 50%
-					transform: translate(-50%, -50%)
-.detail-4
-	.section-title
-		h2
-			font-size: r(30px)
-			color: $black
-	.hero-list
-		.wrap-img
-			display: flex
-			align-items: center
-			justify-content: center
-			.img
-				width: 423px
-				+img-scale(.5)
-		.wrapper-content
-			height: 100%
-			display: flex
-			flex-direction: column
-			justify-content: center
-			.title
-				font-size: r(18px)
-				font-weight: 800
-				color: $main
-				padding-bottom: 15px
-			.content
-				p
+					.img
+						width: 100%
+						a
+							+img-scale(.5)
+			.gallery-top
+				width: 570px
+				height: 100%
+				.swiper-inner
+					position: relative
+					width: 100%
+					height: 100%
+					display: flex
+					align-items: center
+					justify-content: center
+					border: solid 1px #e1e1e1
+					border-radius: 5px
+					.option
+						top: 10px
+						right: 10px
+						left: auto
+						width: 70px
+						height: 58px
+						.inner
+							font-size: 1rem
+							font-weight: 800
+						&.red
+							background-image: url('../img/icons/bg-red-big.png')
+					.img
+						width: 100%
+						a
+							+img-scale(.5)
+				.swiper-button-next,
+				.swiper-button-prev
+					&::before
+						color: $gray
+						font-size: r(40px)
+				.swiper-button-next
+					right: 20px
+				.swiper-button-prev
+					left: 20px
+		.pro-infor-wrap
+			.block-name
+				padding-bottom: 12px
+				border-bottom: solid 1px #e1e1e1
+				.title
+					font-size: r(30px)
+					font-weight: 400
+					line-height: 23px
+					padding-bottom: 12px
+				.core-pro
 					font-size: r(14px)
-					line-height: 20px
-					color: $text
-					padding-bottom: 30px
-		&:nth-child(odd)
-			margin-top: 60px
-			margin-bottom: 60px
-			.row
-				.col-lg-7
-					order: 2
-				.col-lg-5
-					order: 1
+					color: $gray
+					padding-bottom: 10px
+				.pro-price
+					padding-bottom: 7px
+					.old-price
+						text-decoration: line-through
+						color: $gray
+					.net-price
+						color: $main
+						font-size: r(20px)
+						font-weight: 800
+						margin-left: 17px
+			.block-filter
+				padding-top: 23px
+				border-bottom: solid 1px #e1e1e1
+				table
+					tr
+						line-height: 50px
+						td
+							&:first-child
+								font-weight: 700
+								color: $black
+							&:last-child
+								padding-left: 70px
+								display: flex
+								align-items: center
+								height: 50px
+								a
+									.img
+										width: 40px
+										height: 40px
+										display: flex
+										align-items: center
+										justify-content: center
+										background: #f8f8f8
+										border: solid 1px #eaeaea
+									+ a
+										margin-left: 10px
+									&.btn-filter
+										height: 30px
+										display: flex
+										align-items: center
+										justify-content: center
+			.block-card
+				border-bottom: solid 1px #e1e1e1
+				padding-top: 20px
+				padding-bottom: 20px
+				.item-quantity
+					display: flex
+					align-items: center
+					.input-group
+						display: flex
+						align-items: center
+						.input-group-btn
+							.btn-number
+								cursor: pointer
+								width: 30px
+								height: 30px
+								display: flex
+								align-items: center
+								justify-content: center
+								border-radius: 50%
+								background: #e1e1e1
+						.input-number
+							width: 40px
+							height: 40px
+							margin: 0 10px
+							font-size: r(18px)
+							text-align: center
+							border-radius: 5px
+							border: solid 1px #e1e1e1
+					.pro-price
+						display: flex
+						align-items: center
+						margin-left: 24px
+						.old-price
+							font-size: r(12px)
+							color: $gray
+							text-decoration: line-through
+						.net-price
+							font-size: r(15px)
+							font-weight: 700
+							margin-left: 20px
+				.add-shopping-cart
+					padding-top: 20px
+					.add-card
+						display: flex
+						align-items: center
+						justify-content: center
+						width: 100%
+						height: 50px
+						border-radius: 5px
+						border: solid 1px transparent
+						transition: all .5s
+						background: $main
+						font-size: 1rem
+						color: $white
+						line-height: 24px
+						text-transform: uppercase
+						em
+							margin-right: 22px
+						@media screen and ( min-width: 992px )
+							&:hover
+								background: transparent
+								border: solid 1px $main
+								color: $main
+			.block-share
+				display: flex
+				align-items: center
+				padding-top: 14px
+				.text
+					line-height: 40px
+					font-weight: 700
+				a
+					margin-left: 25px
+		@media screen and ( max-width: 1279.98px )
+			.wrap-slide-detail
+				.gallery-thumbs
+					width: 15%
+				.gallery-top
+					width: 80%
+		@media screen and ( max-width: 1199.98px )
+			.wrap-slide-detail
+				flex-direction: column-reverse
+				.gallery-thumbs
+					width: 100%
+					height: 85px
+					.swiper-inner
+						.img
+							a
+								+img-scale(.5)
+				.gallery-top
+					width: 100%
+					margin-bottom: 20px
+					.swiper-inner
+						.img
+							a
+								+img-scale(.5)
+		@media screen and ( max-width: 991.98px )
+			.wrap-slide-detail
+				margin-bottom: 30px
+				.gallery-thumbs
+					.swiper-inner
+						.img
+							a
+								+img-scale(.4)
+				.gallery-top
+					.swiper-inner
+						.img
+							a
+								+img-scale(.4)
+		@media screen and ( max-width: 767.98px )
+			.wrap-slide-detail
+				height: auto
+				.gallery-top
+					.swiper-inner
+						padding: 30px
+						.img
+							a
+								+img-scale(.3)
+	.detail-2
+		.hero-list
+			width: 100%
+			.item
+				margin-left: auto
+				.text
+					font-size: r(18px)
+					line-height: 40px
+					font-weight: 600
+					letter-spacing: -0.02px
+					margin-left: 12px
+				&:first-child
+					margin-left: 0
+			@media screen and ( max-width: 991.98px )
+				flex-direction: row
+				flex-wrap: wrap
+				.item
+					flex: 1 0 50%
+					justify-content: center
+					margin-bottom: 30px
+			@media screen and ( max-width: 575.98px )
+				.item
+					flex-direction: column
+	.detail-3
+		.hero-infor
+			.title
+				font-size: r(30px)
+				color: $black
+				font-weight: 400
+				padding-bottom: 34px
+			table
+				width: 100%
+				border-collapse: collapse
+				border: solid 1px #e1e1e1
+				tr
+					line-height: 50px
+					border: solid 1px #e1e1e1
+					td
+						&:first-child
+							font-weight: 700
+							padding-left: 20px
+					&:first-child
+						border: none
+					&:last-child
+						border: none
+		.hero-img
+			width: 100%
+			height: 465px
+			padding-left: 105px
+			.img
+				position: relative
+				width: 944px
+				height: 465px
+				a
+					+img-ratio(465/944)
+					.icon
+						position: absolute
+						width: 51px
+						height: 41px
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+		@media screen and ( max-width: 1199.98px )
+			.hero-img
+				height: 100%
+				.img
+					width: 100%
+					height: 100%
+					a
+						+img-ratio(395/425)
+						img
+							height: 100%
+		@media screen and ( max-width: 991.98px )
+			.hero-img
+				padding-left: 0
+				.img
+					a
+						padding-top: 0
+						img
+							position: static
+	.detail-4
+		.section-title
+			h2
+				font-size: r(30px)
+				color: $black
+		.hero-list
+			.wrap-img
+				display: flex
+				align-items: center
+				justify-content: center
+				.img
+					width: 423px
+					+img-scale(.5)
+			.wrapper-content
+				height: 100%
+				display: flex
+				flex-direction: column
+				justify-content: center
+				.title
+					font-size: r(18px)
+					font-weight: 800
+					color: $main
+					padding-bottom: 15px
+				.content
+					p
+						font-size: r(14px)
+						line-height: 20px
+						color: $text
+						padding-bottom: 30px
+			&:nth-child(odd)
+				margin-top: 60px
+				margin-bottom: 60px
+				.row
+					.col-lg-7
+						order: 2
+					.col-lg-5
+						order: 1
+			@media screen and ( max-width: 991.98px )
+				&:nth-child(odd)
+					margin: 20px 0
+					.row
+						.col-lg-7
+							order: 1
+						.col-lg-5
+							order: 2
+				.wrap-img
+					margin-bottom: 30px
+					.img
+						+img-scale(.3)
+
+				.wrapper-content
+					.content
+						p
+							padding-bottom: 10px
+	.detail-5
+		.section-title
+			color: $white
+			font-weight: 400
+		.wrap-list-bundle
+			justify-content: space-between
+			flex-flow: row wrap
+			.product-item
+				position: relative
+				padding: 30px
+				flex: 0 0 343px
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				min-height: 410px
+				border-radius: 5px
+				background: $white
+				margin-left: 100px
+				.option
+					top: 10px
+				.pro-img
+					position: absolute
+					top: 40%
+					left: 50%
+					width: 100%
+					transform: translate(-50%, -50%)
+					a
+						+img-scale(.5)
+				.pro-infor
+					margin-top: auto
+					.pro-title
+						text-align: center
+						padding-bottom: 17px
+						a
+							font-size: 1rem
+					.pro-price
+						.price
+							.priceold
+								text-decoration: line-through
+								color: $gray
+							.pricesale
+								font-weight: 800
+								font-size: r(18px)
+						.order
+							margin-left: auto
+				&::after
+					position: absolute
+					right: -60px
+					top: 50%
+					transform: translateY(-50%)
+					font-size: 0
+				&:first-child
+					margin-left: 0
+					&::after
+						content: url('../img/icons/add.png')
+				&:nth-child(2)
+					&::after
+						content: url('../img/icons/equal.png')
+			@media screen and ( max-width: 1279.98px )
+				.product-item
+					flex: 0 0 505px
+					margin-bottom: 100px
+					.pro-img
+						a
+							+img-scale(.3)
+					&:last-child
+						margin: 0 auto
+					&:nth-child(2)
+						&::after
+							top: auto
+							bottom: -60px
+							right: auto
+							left: -62px
+			@media screen and ( max-width: 1199.98px )
+				padding-bottom: 30px
+				.product-item
+					flex: 0 0 415px
+			@media screen and ( max-width: 991.98px )
+				.product-item
+					flex: 0 0 330px
+					min-height: 315px
+			@media screen and ( max-width: 799.98px )
+				.product-item
+					flex: 0 0 43%
+			@media screen and ( max-width: 767.98px )
+				.product-item
+					padding: 15px
+					flex: 0 0 41%
+					margin-left: 0
+					.pro-infor
+						.pro-title
+							padding-bottom: 7px
+							a
+								font-size: r(14px)
+						.pro-price
+							.price
+								.priceold,
+								.pricesale
+									font-size: r(14px)
+							.order
+								font-size: r(12px)
+			@media screen and ( max-width: 575.98px )
+				.product-item
+					min-height: 300px
+					flex: 0 0 100%
+					margin-bottom: 50px
+					.pro-img
+						a
+							+img-scale(.3)
+					.pro-infor
+						padding: 0
+						.pro-price
+							flex-direction: column
+							.order
+								margin-left: 0
+								margin-top: 7px
+					&::after
+						right: 44%
+						top: auto
+						bottom: -42px
+						transform: translateX(-50%)
+					&:nth-child(2)
+						&::after
+							left: 50%
+							bottom: -30px
+							transform: translateX(-50%)
+	.detail-6
+		.section-title
+			font-weight: 400
+	.detail-7
+		.hero-slide-pro
+			position: relative
+			.swiper-button-next,
+			.swiper-button-prev
+				top: 30%
+				&::before
+					color: #9a9a9a
+			.swiper-button-next
+				right: -60px
+			.swiper-button-prev
+				left: -60px
+
+	@media screen and ( max-width: 991.98px )
+		position: relative
+		#tool-option
+			position: absolute
+			top: 50px
+			left: 0
+			width: 30px
+			height: 30px
+			font-size: r(20px)
+			color: $white
+			background: $main
+			display: flex
+			align-items: center
+			justify-content: center
+			z-index: 999
+		.zone-list
+			position: absolute
+			top: 80px
+			left: 0
+			background: $main
+			z-index: 99
+			width: max-content
+			border: none
+			padding: 30px
+			display: none
+			ul
+				flex-direction: column
+				li
+					a
+						color: $white
+					&.active
+						&::after
+							background: $white
+				li + li
+					margin-left: 0
+					padding-top: 15px

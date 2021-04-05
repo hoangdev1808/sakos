@@ -93,8 +93,6 @@ footer
 						font-weight: 700
 						transform: translateY(-50%)
 						letter-spacing: 1px
-						&::before
-							content: 'đăng ký'
 						&::after
 							padding-left: 8px
 							content: url('../img/icons/right-1.png')
@@ -140,6 +138,10 @@ footer
 		border-top: solid 1px #444444
 		.wraper-content
 			padding: 18px 0
+			.Module
+				.ModuleContent
+					display: flex
+					align-items: center
 			.design-by-canhcam
 				letter-spacing: 1.3px
 				a
@@ -172,3 +174,12 @@ footer
 					.lnr
 						font-size: 13/16*1rem
 						padding-left: 10px
+		@media screen and ( max-width: 991.98px )
+			.wraper-content
+				flex-direction: column
+				ul
+					margin-left: 0
+					li + li
+						margin-left: 10px
+				.back-to-top
+					margin: 0 auto

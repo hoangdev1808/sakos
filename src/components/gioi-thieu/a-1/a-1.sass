@@ -1,7 +1,46 @@
 .about-1
-	padding-top: 40px
-	margin-top: 16px
+	position: relative
+	padding-top: 0
 	background-position: top !important
+	.breadcrumb-wrapper
+		background: transparent
+	#tool-option
+		position: absolute
+		top: 70px
+		left: 0
+		background: $main
+		z-index: 1001
+		width: 30px
+		height: 30px
+		em
+			color: $white
+			font-size: r(20px)
+			display: flex
+			align-items: center
+			justify-content: center
+		@media screen and ( min-width: 768px )
+			display: none
+	.catelogry
+		@media screen and ( max-width: 767.98px )
+			border: none
+			width: max-content
+			padding: 1rem
+			position: absolute
+			z-index: 1000
+			padding-top: 30px
+			display: none
+			top: 70px
+			left: 0
+			ul
+				flex-direction: column
+				align-items: flex-start
+				li
+					padding: .5rem
+					&.active
+						&::after
+							bottom: 8px
+				li + li
+					margin-left: 0
 	.section-title
 		max-width: 690px
 		margin: 0 auto
@@ -48,7 +87,6 @@
 			pointer-events: none
 			background: rgba($color: $black, $alpha: .5)
 	@media screen and ( max-width: 991.98px )
-		padding-top: 10px
 		.section-title
 			padding-bottom: 20px
 		.wrap-content

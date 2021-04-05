@@ -27,69 +27,12 @@
 		@media screen and ( max-width: 991.9px )
 			[class*='col-']
 				margin-bottom: r(30px)
-		.brand-item 
-			position: relative
-			.big-img
-				padding-top: 25px
-			.img
-				+img-ratio(180/215, contain)
-			.sm-box
-				display: flex
-				justify-content: center
-				padding-top: r(50px)
-				.sm-img
-					width: 40px
-					height: 40px
-					border: 1px solid #eaeaea
-					background-color: #f8f8f8
-					+dc
-					cursor: pointer
-					&:not(:last-child)
-						margin-right: 10px
-					&.active
-						border: 1px solid #ff0000
-			.title
-				text-align: center
-				margin: r(20px) 0
-				transition: .3s all ease-in-out
-				&:hover
-					color: $main
-			.wrap-price
-				display: flex
-				justify-content: space-between
-				align-items: center
-				@media screen and ( max-width: 1279.9px )
-					display: block
-					text-align: center
-				.price
-					.priceold
-						text-decoration: line-through
-						color: $gray
-						text-transform: uppercase
-						@media screen and ( max-width: 767.9px )
-							font-size: r(14px)
-					.pricesale
-						font-size: r(18px)
-						font-weight: 800
-						@media screen and ( max-width: 767.9px )
-							font-size: 1rem
-				.order
-					.btn
-						padding: r(10px) r(15px)
-						+dc
-						text-transform: uppercase
-						font-size: 12px
-						letter-spacing: 1.2px
-						border: 1px solid $text
-						border-radius: 5px
-						background: $white
-						max-width: 110px
-						transition: .3s all ease-in-out
-						@media screen and ( max-width: 1279.9px )
-							margin-top: r(20px)
-							margin-left: auto
-							margin-right: auto
-						&:hover
-							border: 1px solid $main
-							color: $white
-							background: $main
+		.product-item
+			margin-bottom: 30px
+			.pro-img
+				padding-top: 30px
+				margin-bottom: 30px
+				a
+					+img-scale(1)
+					img
+						transition: all .5s

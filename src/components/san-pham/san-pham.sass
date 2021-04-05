@@ -56,65 +56,41 @@
 			.filter-title
 				font-weight: 700
 			.filter-option
-				display: flex
-				flex-direction: row
-				flex-wrap: wrap
-				width: 100%
-				padding-top: 17px
-				.btn
-					margin-bottom: 10px
-					+ .btn
-						margin-left: 10px
 				ul
 					display: flex
-					align-items: center
+					flex-direction: row
+					flex-wrap: wrap
+					width: 100%
+					padding-top: 17px
 					li
-						a
-							display: block
-							span
-								display: block
-								width: 15px
-								height: 15px
-								border-radius: 50%
-						+ li
-							margin-left: 12px
+						flex: 1
+						width: 50%
+						margin-bottom: 10px
+						.btn
+							width: 100%
+							&-filter
+								padding: 5px 17px
+								text-align: center
+								border: solid 1px #eaeaea
+								border-radius: 5px
+								background: $white
+								transition: all .5s
+								font-size: r(14px)
+								@media screen and ( min-width: 992px )
+									&:hover
+										border: solid 1px transparent
+										background: $main
+										color: $white
+							+ .btn
+								margin-left: 10px
 						&.active
-							a
-								border-radius: 50%
-								border: solid 2px $text
-								span
-									border: solid 2px $white
-						&:first-child
-							a
-								span
-									background: #707070
-						&:nth-child(2)
-							a
-								span
-									background: #9e0b0f
-						&:nth-child(3)
-							a
-								span
-									background: #005e20
-						&:nth-child(4)
-							a
-								span
-									background: #2e3192
-						&:nth-child(5)
-							a
-								span
-									background: #111111
-						&:nth-child(6)
-							a
-								span
-									background: #8560a8
-						&:last-child
-							a
-								span
-									background: #7b6a57
+							.btn-filter
+								border: solid 1px transparent
+								background: $main
+								color: $white
 				.ui-slider
 					width: 100%
-					margin-top: 17px
+					margin-top: 30px
 					height: 3.18px
 					background: #eaeaea
 					&.ui-widget.ui-widget-content
@@ -149,36 +125,86 @@
 					label
 						color: $main
 						font-size: r(14px)
+			&:nth-child(2)
+				.filter-option
+					ul
+						li + li
+							padding-left: 10px
 			&:nth-child(3)
 				.filter-option
-					.btn
-						&-filter
-							flex: 1
-							width: 30%
-
+					ul
+						li
+							flex: 0 0 87.99px
+							&:nth-child(even)
+								padding: 0 9px
+			&:nth-child(4)
+				.filter-option
+					ul
+						display: flex
+						align-items: center
+						li
+							position: relative
+							width: 15px
+							height: 15px
+							flex: 0 0 15px
+							align-items: center
+							display: flex
+							.btn
+								width: 12px
+								height: 12px
+								border-radius: 50%
+								padding: 0
+								font-size: 0
+							+ li
+								margin-left: 12px
+							&.active
+								border-radius: 50%
+								border: solid 2px $text
+								.btn
+									border: solid 2px $white
+							&:first-child
+								a
+									background: #707070
+							&:nth-child(2)
+								a
+									background: #9e0b0f
+							&:nth-child(3)
+								a
+									background: #005e20
+							&:nth-child(4)
+								a
+									background: #2e3192
+							&:nth-child(5)
+								a
+									background: #111111
+							&:nth-child(6)
+								a
+									background: #8560a8
+							&:last-child
+								a
+									background: #7b6a57
 			&:nth-child(5)
 				.filter-option
-					.btn
-						&:nth-child(2n-1)
-							margin-left: 0
+					ul
+						li
+							&:nth-child(even)
+								padding-left: 5px
+							&:nth-child(odd)
+								padding-right: 5px
 	@media screen and ( max-width: 1199.98px )
 		.side-filter
 			margin-top: 30px
 			.section-title
 				font-size: r(20px)
 			.filter-wrap
-				.filter-option
-					.btn
-						&-filter
-							flex: 1 0 100%
-						+ .btn
-							margin-left: 0
 				&:nth-child(3)
 					.filter-option
-						.btn
-							&-filter
-								flex: 1 0 100%
-								width: 100%
+						ul
+							li
+								flex: 0 0 100%
+								&:nth-child(even)
+									padding: 0
+
 	@media screen and ( max-width: 991.98px )
 		.side-filter
 			margin-bottom: 30px
@@ -193,6 +219,11 @@
 					justify-content: space-between
 				.filter-option
 					display: none
+				&:nth-child(5)
+					.filter-option
+						ul
+							li + li
+								padding-left: 10px
 
 	.hero-product
 		.block_name_category
@@ -229,71 +260,7 @@
 						content: '|'
 				.sort-wrap
 					padding-left: 20px
-		.product-item
-			position: relative
-			margin-bottom: 30px
-			.pro-img
-				width: 134px
-				margin: 0 auto
-				a
-					+img-scale(2)
-			ul
-				display: flex
-				align-items: center
-				justify-content: center
-				margin-bottom: 30px
-				li
-					width: 40px
-					height: 40px
-					display: flex
-					align-items: center
-					justify-content: center
-					background: #f8f8f8
-					border: solid 1px #eaeaea
-					a
-						width: 100%
-						display: inline-block
-						+img-scale(.6)
-					+ li
-						margin-left: 10px
-					&.active
-						border: solid 1px $main
-			.pro-infor
-				padding: 0 10px
-				display: flex
-				flex-direction: column
-				justify-content: space-between
-				.pro-title
-					display: flex
-					justify-content: center
-					padding-bottom: 8px
-				.pro-price
-					justify-content: space-between
-					.price
-						.priceold
-							color: $gray
-							text-decoration: line-through
-						.pricesale
-							font-size: r(18px)
-							font-weight: 700
-							letter-spacing: 0.05px
-	@media screen and ( max-width: 1199.98px )
-		.hero-product
-			.product-item
-				.pro-img
-					width: 115px
-				.pro-infor
-					.pro-title
-						font-size: r(14px)
-					.pro-price
-						.price
-							.priceold
-								font-size: r(13px)
-							.pricesale
-								font-size: r(14px)
-						.order
-							.btn-order
-								padding: 5px
+
 	@media screen and ( max-width: 991.98px )
 		.hero-product
 			.block_name_category

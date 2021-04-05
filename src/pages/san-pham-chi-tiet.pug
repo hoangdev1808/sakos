@@ -5,6 +5,20 @@ block var
 	- var bodyClass = 'homepage'
 
 block main
-	include ../components/_global/nav-list/_navzone.pug
-	include ../components/_global/breabcrumb/breadcrumb.pug
-	include ../components/san-pham/detail.pug
+	section#product-detail-page
+		#tool-option
+			em.ri-list-check-2
+		.zone-list
+			ul 
+				li.active
+					a(href="#about-1") Về Sakos 
+				li 
+					a(href="#about-2") Lịch sử phát triển
+				li 
+					a(href="#about-3") Nhãn hàng 
+				li 
+					a(href="#about-4") Giá trị cốt lõi 
+				li 
+					a(href="#about-5") Tuyển dụng
+		include ../components/_global/breabcrumb/breadcrumb.pug
+		include ../components/san-pham/detail.pug

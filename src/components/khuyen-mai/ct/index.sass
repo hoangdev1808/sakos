@@ -4,13 +4,14 @@
 		font-size: 12px
 		line-height: 1.7
 	.section-title
+		padding-bottom: 17px
 		font-size: r(30px)
 		text-align: left
 		border-bottom: thin solid $main
 		letter-spacing: normal
 	.wrap-bottom
 		display: flex
-		padding: 10px 0 
+		padding: 10px 0
 		align-items: center
 		border-bottom: 1px solid $border
 		@media screen and ( max-width: 580px )
@@ -19,6 +20,8 @@
 		.social
 			display: flex
 			align-items: center
+			.face
+				padding-left: 10px
 		.date
 			position: relative
 			&::before
@@ -39,6 +42,8 @@
 					margin-right: 20px
 	.fullcontent
 		padding: r(30px) 0
+		img
+			margin-top: 30px
 
 .discount-brand
 	.brand
@@ -63,36 +68,44 @@
 		font-size: 12px
 		line-height: 1.7
 	.section-title
-		border: 0
+		border: none
 	.swiper-discount-other
 		position: relative
-		img
-			border-radius: 5px
-		.swiper-button-next,
-		.swiper-button-prev
-			top: 33%
-	.item
-		.content
-			padding-top: r(20px)
-			.title
-				margin-bottom: 24px
-				padding-right: r(60px)
-				@media screen and ( max-width: 1023.9px )
-					padding-right: r(40px)
-				@media screen and ( max-width: 767.9px )
-					padding-right: r(20px)
+		.item
+			.img
 				a
-					font-size: 18/16*1rem
-					// font-weight: 700
-					line-height: 24px
+					+img-ratio(225/390)
+					img
+						border-radius: 5px
+			.content
+				min-height: 140px
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				padding-top: r(20px)
+				.title
+					margin-bottom: 24px
+					padding-right: r(60px)
+					@media screen and ( max-width: 1023.9px )
+						padding-right: r(40px)
+					@media screen and ( max-width: 767.9px )
+						padding-right: r(20px)
+					a
+						font-size: 18/16*1rem
+						// font-weight: 700
+						line-height: 24px
+						transition: .3s all ease-in-out
+						&:hover
+							color: $main
+				.item-view-more
+					font-size: 14/16*1rem
+					font-weight: 600
+					text-transform: uppercase
+					text-decoration: underline
 					transition: .3s all ease-in-out
 					&:hover
 						color: $main
-			.item-view-more
-				font-size: 14/16*1rem
-				font-weight: 600
-				text-transform: uppercase
-				text-decoration: underline
-				transition: .3s all ease-in-out
-				&:hover
-					color: $main
+
+		.swiper-button-next,
+		.swiper-button-prev
+			top: 33%

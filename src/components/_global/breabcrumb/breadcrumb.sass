@@ -9,7 +9,6 @@
 		flex-wrap: wrap
 		list-style: none
 		margin-bottom: 0
-		padding: 1rem
 		li
 			position: relative
 			display: flex
@@ -18,10 +17,13 @@
 			font-size: 18px
 			& + li
 				margin-left: 23px
-			&.active,
-			&:hover
-				a
-					color: $black
+			a
+				&.active,
+				&:hover
+					span
+						color: $black
+			@media screen and ( max-width: 991.98px )
+				font-size: r(14px)
 
 		li+li 
 			&::before
