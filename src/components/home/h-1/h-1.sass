@@ -10,25 +10,61 @@
 			border-bottom: solid 1px #555555
 			li
 				margin-left: auto
-				a
-					position: relative
-					font-size: 18/16*1rem
-					color: #666666
-					letter-spacing: 0.4px
+				position: relative
+				font-size: 18/16*1rem
+				color: #666666
+				letter-spacing: 0.4px
+				cursor: pointer
+				&:first-child
+					margin-left: 40px
+				&:last-child
+					margin-right: 40px
 				&.active
-					a
-						font-weight: 700
-						color: $text
-						overflow: visible
+					font-weight: 700
+					color: $text
+					overflow: visible
+					&::after
+						position: absolute
+						bottom: -2px
+						left: 50%
+						transform: translateX(-50%)
+						width: 100%
+						height: 3px
+						content: ''
+						background: $black
+			@media screen and ( max-width: 991.98px )
+				justify-content: center
+				li
+					font-size: r(14px)
+					&:first-child
+						margin-left: 0
+			@media screen and ( max-width: 575.98px )
+				margin-bottom: 20px
+				flex-flow: row wrap
+				border: none
+				li
+					flex: 0 0 50%
+					padding: .5rem 0
+					display: flex
+					align-items: center
+					justify-content: center
+					background: $main
+					color: $white
+					border: solid 1px transparent
+					&.active
+						color: $main
+						background: transparent
 						&::after
-							position: absolute
-							bottom: -2px
-							left: 50%
-							transform: translateX(-50%)
-							width: 191px
-							height: 3px
-							content: ''
-							background: $black
+							display: none
+					&:first-child
+						border-right: solid 1px $white
+					&:last-child
+						flex: 0 0 100%
+						margin-right: 0
+						margin-top: 1px
+				li + li
+					margin-left: 0
+
 		.wrap-desc
 			max-width: 600px
 			margin: 0 auto
@@ -37,84 +73,11 @@
 				text-align: center
 				font-size: 14/16*1rem
 				line-height: 20px
-		.tab-content
+		.tab-panel
 			.wrap-slide
 				position: relative
-				.swiper-inner
-					position: relative
-					flex-direction: column
-					align-items: center
-					justify-content: center
-					// .option
-					// 	position: absolute
-					// 	top: 0
-					// 	left: 0
-					.img
-						width: 285px
-						padding-top: 40px
-						margin-bottom: 35px
-						a
-							+img-scale(.6)
-					.filter-color
-						width: 100%
-						padding-bottom: 46px
-
-						ul
-							display: flex
-							align-items: center
-							justify-content: center
-							li
-								overflow: visible
-								display: flex
-								align-items: center
-								justify-content: center
-								a
-									position: relative
-									width: 15px
-									height: 15px
-									border-radius: 50%
-									display: flex
-									align-items: center
-									justify-content: center
-
-								+ li
-									margin-left: 12px
-								&.active
-									a
-										&::after
-											position: absolute
-											top: 50%
-											left: 50%
-											transform: translate(-50%, -50%)
-											width: 20px
-											height: 20px
-											border-radius: 50%
-											z-index: -1
-											content: ''
-											background: $white
-											border: solid 1px $black
-								&:first-child
-									a
-										background: #707070
-								&:nth-child(2)
-									a
-										background: #9e0b0f
-
-								&:nth-child(3)
-									a
-										background: #005e20
-
-								&:last-child
-									a
-										background: #2e3192
-
-					.wrap-infor
-						flex-direction: column
-						align-items: center
-						justify-content: center
-						.price-box
-							.old-price
-								text-decoration-line: line-through
+				.product-item
+					margin-bottom: 0
 				.swiper-button-next,
 				.swiper-button-prev
 					top: 40%
@@ -133,3 +96,10 @@
 				margin-right: auto
 				margin-top: 35px
 				margin-bottom: 10px
+				@media screen and ( max-width: 991.98px )
+					width: max-content
+					height: auto
+					padding: .5rem 1rem
+					margin-top: 20px
+	@media screen and ( max-width: 575.98px )
+		padding-top: 30px

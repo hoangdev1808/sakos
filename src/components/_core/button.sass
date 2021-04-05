@@ -90,7 +90,61 @@
 				background: $main
 				color: $white
 				border: solid 1px transparent
-
+	&-order
+		border-radius: 5px
+		border: solid 1px $text
+		padding: 5px 16px
+		transition: all .5s
+		@media screen and ( min-width: 992px )
+			&:hover
+				border: solid 1px transparent
+				background: $main
+				color: $white
+	&-search-2
+		width: 100%
+		height: 40px
+		border: solid 1px $main
+		color: $main
+		border-radius: 5px
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: .3s all ease-in-out
+		&:hover
+			border: solid 1px transparent
+			color: $white
+			background: $main
+	&-continue,
+	&-booling
+		width: 240px
+		height: 40px
+		border-radius: 5px
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 1rem
+		text-transform: uppercase
+		letter-spacing: 0.1px
+	&-continue
+		background: #f3f3f3
+		color: #444444
+	&-booling
+		background: $red
+		color: $white
+		margin-left: 28px
+.btn-dropdown
+	font-size: r(24px)
+	cursor: pointer
+	display: flex
+	align-items: cente
+	justify-content: center
+	em
+		transition: all .5s
+	&.active
+		em
+			transform: rotate(180deg)
+	@media screen and ( min-width: 992px )
+		display: none
 .button-gray
 	.swiper-button-next,
 	.swiper-button-prev

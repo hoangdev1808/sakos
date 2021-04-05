@@ -1,0 +1,271 @@
+.product-list
+	.side-navigation-wrapper
+		.section-title
+			padding-bottom: 20px
+			border-bottom: solid 1px $gray
+			h1
+				font-size: r(24px)
+				font-weight: 800
+				line-height: 18px
+				letter-spacing: 0.05px
+			@media screen and ( max-width: 992px )
+				display: flex
+				align-items: center
+				justify-content: space-between
+		.side-navigation
+			li
+				padding: 15px 0
+				border-bottom: solid 1px $gray
+				.accordion-title
+					display: flex
+					align-items: center
+					justify-content: space-between
+					a
+						font-weight: 700
+					em
+						cursor: pointer
+						font-size: r(16px)
+						transition: all .5s
+				.nav-sub
+					display: none
+					padding-left: 25px
+					li
+						padding: 7px 0
+						border-bottom: none
+					&.show
+				&.active
+					.accordion-title
+						a
+							color: $main
+						em
+							transform: rotate(180deg)
+			@media screen and ( max-width: 991.98px )
+				display: none
+	.side-filter
+		margin-top: 53px
+		.section-title
+			font-size: r(24px)
+			font-weight: 800
+			line-height: 18px
+			letter-spacing: 0.05px
+			padding-bottom: 18px
+			border-bottom: solid 1px $text
+		.filter-wrap
+			padding: 15px 0
+			border-bottom: solid 1px $text
+			.filter-title
+				font-weight: 700
+			.filter-option
+				ul
+					display: flex
+					flex-direction: row
+					flex-wrap: wrap
+					width: 100%
+					padding-top: 17px
+					li
+						flex: 1
+						width: 50%
+						margin-bottom: 10px
+						.btn
+							width: 100%
+							&-filter
+								padding: 5px 17px
+								text-align: center
+								border: solid 1px #eaeaea
+								border-radius: 5px
+								background: $white
+								transition: all .5s
+								font-size: r(14px)
+								@media screen and ( min-width: 992px )
+									&:hover
+										border: solid 1px transparent
+										background: $main
+										color: $white
+							+ .btn
+								margin-left: 10px
+						&.active
+							.btn-filter
+								border: solid 1px transparent
+								background: $main
+								color: $white
+				.ui-slider
+					width: 100%
+					margin-top: 30px
+					height: 3.18px
+					background: #eaeaea
+					&.ui-widget.ui-widget-content
+						border: solid 1px transparent !important
+					.ui-slider-range
+						background: $main
+					.ui-slider-handle
+						position: relative
+						&.ui-corner-all
+							width: 10px
+							height: 10px
+							display: block
+							border-radius: 50%
+							background: $main
+							&:focus
+								outline: none
+						.tooltip
+							position: absolute
+							display: block
+							top: -23px
+							width: 100px
+							height: 29px
+							color: $main
+							font-size: r(14px)
+							&:focus
+								outline: none
+				.filter-label
+					width: 100%
+					margin-top: 10px
+					display: flex
+					justify-content: space-between
+					label
+						color: $main
+						font-size: r(14px)
+			&:nth-child(2)
+				.filter-option
+					ul
+						li + li
+							padding-left: 10px
+			&:nth-child(3)
+				.filter-option
+					ul
+						li
+							flex: 0 0 87.99px
+							&:nth-child(even)
+								padding: 0 9px
+			&:nth-child(4)
+				.filter-option
+					ul
+						display: flex
+						align-items: center
+						li
+							position: relative
+							width: 15px
+							height: 15px
+							flex: 0 0 15px
+							align-items: center
+							display: flex
+							.btn
+								width: 12px
+								height: 12px
+								border-radius: 50%
+								padding: 0
+								font-size: 0
+							+ li
+								margin-left: 12px
+							&.active
+								border-radius: 50%
+								border: solid 2px $text
+								.btn
+									border: solid 2px $white
+							&:first-child
+								a
+									background: #707070
+							&:nth-child(2)
+								a
+									background: #9e0b0f
+							&:nth-child(3)
+								a
+									background: #005e20
+							&:nth-child(4)
+								a
+									background: #2e3192
+							&:nth-child(5)
+								a
+									background: #111111
+							&:nth-child(6)
+								a
+									background: #8560a8
+							&:last-child
+								a
+									background: #7b6a57
+			&:nth-child(5)
+				.filter-option
+					ul
+						li
+							&:nth-child(even)
+								padding-left: 5px
+							&:nth-child(odd)
+								padding-right: 5px
+	@media screen and ( max-width: 1199.98px )
+		.side-filter
+			margin-top: 30px
+			.section-title
+				font-size: r(20px)
+			.filter-wrap
+				&:nth-child(3)
+					.filter-option
+						ul
+							li
+								flex: 0 0 100%
+								&:nth-child(even)
+									padding: 0
+
+	@media screen and ( max-width: 991.98px )
+		.side-filter
+			margin-bottom: 30px
+			.section-title
+				display: flex
+				align-items: center
+				justify-content: space-between
+			.filter-wrap
+				.filter-title
+					display: flex
+					align-items: center
+					justify-content: space-between
+				.filter-option
+					display: none
+				&:nth-child(5)
+					.filter-option
+						ul
+							li + li
+								padding-left: 10px
+
+	.hero-product
+		.block_name_category
+			padding-bottom: 14px
+			margin-bottom: 49px
+			align-items: center
+			justify-content: space-between
+			border-bottom: solid 1px $gray
+			.name_category
+				h2
+					line-height: 18px
+					font-weight: 400
+					font-size: r(16px)
+					color: $gray-2
+			.wrap-left
+				.option-wrap,
+				.sort-wrap
+					p
+						line-height: 18px
+						color: $gray-2
+					select
+						width: max-content
+						padding-left: 15px
+						border: none
+						font-weight: 700
+						background: transparent
+				.option-wrap
+					padding-right: 20px
+					position: relative
+					&::after
+						position: absolute
+						top: 0
+						right: 0
+						content: '|'
+				.sort-wrap
+					padding-left: 20px
+
+	@media screen and ( max-width: 991.98px )
+		.hero-product
+			.block_name_category
+				.wrap-left
+					.option-wrap,
+					.sort-wrap
+						select
+							padding-left: 0

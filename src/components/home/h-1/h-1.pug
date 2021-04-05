@@ -2,44 +2,111 @@ section.section.home-specail-product
 	.container
 		.section-title Sản phẩm nổi bật
 		.container--tabs
-			ul.nav.nav-tabs.mx-auto
-				li
-					a(href='#tab-1') Sản phẩm khuyến mãi
-				li.active
-					a(href='#tab-2') Sản phẩm mới
-				li
-					a(href='#tab-3') Sản phẩm bán chạy
+			ul.nav-tabs.mx-auto
+				li(rel="tab-1") Sản phẩm khuyến mãi
+				li(rel="tab-2").active Sản phẩm mới
+				li(rel="tab-3") Sản phẩm bán chạy
 			.wrap-desc.lcl.lcl-2
 				p Sakos áp dụng chương trình Tích điểm thẻ thành viên và phát hành thẻ SAKOS MEMBER CARD với nhiều ưu đãi hấp dẫn. Chương trình đang áp dụng tại các cửa hàng Sakos trên toàn quốc. Như lời tri ân sâu sắc đến Quý khách hàng đã, đang và sẽ đồng hành cùng Sakos – thương hiệu sản xuất sản phẩm hành lý tiêu chuẩn Hoa Kỳ.
-			.tab-content
-				#tab-1.tab-pane.active
-					.wrap-slide 
-						.swiper-container
-							.swiper-wrapper
-								-for(i=1; i<5; i++)
-									.swiper-slide
-										.swiper-inner.d-flex
-											.option.red
-												.inner mới
-											.img
-												a(href="")
-													img.lazyload(data-src="./img/home/specail-"+i+".png" alt="")
-											.filter-color 
-												ul 
-													-for(x=1; x<5; x++)
-														li
-															a(href="") 
-											.wrap-infor.d-flex
-												.infor-box
-													.title.f-16 
-														a(href="") Vali Neo Envy
-												.price-box.text-center 
-													.price.f-18.fw-800 2.700.000 VND
-													.old-price.color-gray 2.800.00 VND
-						.swiper-button-next
-						.swiper-button-prev
-					a.btn.btn-view-all(href="") xem tất cả
-				#tab-2.tab-pane
-					h1 2
-				#tab-3.tab-pane
-					h1 3
+			#tab-1.tab-panel
+				.wrap-slide 
+					.swiper-container
+						.swiper-wrapper
+							-for(i=1; i<5; i++)
+								.swiper-slide
+									.product-item 
+										.option.red
+											.inner mới
+										.option.black
+											.inner -15%
+										.pro-img
+											a(href="san-pham-chi-tiet.html")
+												img.lazyload(data-src="./img/san-pham/i-"+i+".png", alt="")
+										ul 
+											li
+												a(href="") 
+													img.lazyload(data-src="./img/km-ct/22.png", alt="") 
+											li.active
+												a(href="") 
+													img.lazyload(data-src="./img/km-ct/23.png", alt="")
+										.pro-infor
+											.pro-title 
+												a(href="san-pham-chi-tiet.html") Cặp Doanh Nhân Legend 04
+											.pro-price.d-flex
+												.price
+													.priceold 2.500.000 VND
+													.pricesale 1.990.000 VND
+												.order 
+													a(href="javascript: ;").btn.btn-order Mua ngay
+
+					.swiper-button-next
+					.swiper-button-prev
+				a.btn.btn-view-all(href="") xem tất cả
+			#tab-2.tab-panel.active
+				.wrap-slide 
+					.swiper-container
+						.swiper-wrapper
+							-for(i=1; i<5; i++)
+								.swiper-slide
+									.product-item 
+										.option.red
+											.inner mới
+										.option.black
+											.inner -15%
+										.pro-img
+											a(href="san-pham-chi-tiet.html")
+												img.lazyload(data-src="./img/san-pham/i-"+i+".png", alt="")
+										ul 
+											li
+												a(href="") 
+													img.lazyload(data-src="./img/km-ct/22.png", alt="") 
+											li.active
+												a(href="") 
+													img.lazyload(data-src="./img/km-ct/23.png", alt="")
+										.pro-infor
+											.pro-title 
+												a(href="san-pham-chi-tiet.html") Cặp Doanh Nhân Legend 04
+											.pro-price.d-flex
+												.price
+													.priceold 2.500.000 VND
+													.pricesale 1.990.000 VND
+												.order 
+													a(href="javascript: ;").btn.btn-order Mua ngay
+
+					.swiper-button-next
+					.swiper-button-prev
+				a.btn.btn-view-all(href="") xem tất cả
+			#tab-3.tab-panel
+				.wrap-slide 
+					.swiper-container
+						.swiper-wrapper
+							-for(i=1; i<5; i++)
+								.swiper-slide
+									.product-item 
+										.option.red
+											.inner mới
+										.option.black
+											.inner -15%
+										.pro-img
+											a(href="san-pham-chi-tiet.html")
+												img.lazyload(data-src="./img/san-pham/i-"+i+".png", alt="")
+										ul 
+											li
+												a(href="") 
+													img.lazyload(data-src="./img/km-ct/22.png", alt="") 
+											li.active
+												a(href="") 
+													img.lazyload(data-src="./img/km-ct/23.png", alt="")
+										.pro-infor
+											.pro-title 
+												a(href="san-pham-chi-tiet.html") Cặp Doanh Nhân Legend 04
+											.pro-price.d-flex
+												.price
+													.priceold 2.500.000 VND
+													.pricesale 1.990.000 VND
+												.order 
+													a(href="javascript: ;").btn.btn-order Mua ngay
+
+					.swiper-button-next
+					.swiper-button-prev
+				a.btn.btn-view-all(href="") xem tất cả

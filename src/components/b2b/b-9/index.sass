@@ -1,13 +1,18 @@
 .b2b-9
 	background-color: #f7f7f7
 	.desc
-		margin-bottom: r(30px) 
+		margin-bottom: r(30px)
 	.my-form
 		.wrap-form
+			position: relative
 			display: flex
 			justify-content: space-between
-			@media screen and ( max-width: 480px )
-				display: block
+			#ctl00_mainContent_ctl04_pnlQuestions
+				width: 100%
+				display: flex
+				justify-content: space-between
+				@media screen and ( max-width: 480px )
+					display: block
 			.btn-catelog
 				+dc
 				color: $white
@@ -33,47 +38,65 @@
 				height: 260px
 			input[type="reset"]
 				display: none
-			.frm-btn
-				border-radius: 5px
-				background: $main
-				color: $white
-				width: 140px
-				transition: .3s all ease-in-out
-				margin-left: auto
-				padding: 10px
-				position: relative
-				border: 1px solid $main
-				+dc
-				&::before
-					content: "\e87a"
-					font-family: "Linearicons-Free"
-					right: 0
-					left: auto
-					border-radius: 0
-					color: $white
-					top: 50%
-					transform: translateY(-50%)
-					font-size: 29px
-					pointer-events: none
-					right: 15px
-					font-weight: 400
-					transition: .3s all ease-in-out
-					position: absolute
-				input[type="submit"]
+			#fomr-catelogue
+				position: absolute
+				left: 0
+				top: 100%
+				display: block
+			.wrap-right
+				.form-group
+					&.qparagraph
+						margin-bottom: 12px
+				.wrap-buttom
+					display: none
+			.frm-captcha
+				flex-direction: row-reverse
+				position: absolute
+				top: 85%
+				right: 18%
+				.frm-captcha-input
+					width: 150px !important
+					margin-left: 50px
+					padding: 0
+				.RadCaptcha
+					width: 115px !important
+					padding-left: 0
+					div
+						div
+							img
+								border: none
+								border-radius: 0
+					.rcRefreshImage
+						&::before
+							content: '\e861'
+							font-family: Linearicons-Free
+							color: #110dab
+							font-size: r(30px)
+			.frm-btnwrap
+				margin-left: 20px
+				position: absolute
+				top: 85%
+				right: 0
+				.frm-btn
+					border-radius: 5px
 					background: $main
 					color: $white
-					font-size: 14px
-					font-weight: 400
-					z-index: 3
-					padding-left: 0
-					text-transform: none
+					width: 160px
 					transition: .3s all ease-in-out
-					border: none
-				&:hover
-					background: $white
-					border: 1px solid $main
-					input[type="submit"]
-						background: $white
-						color: $main
+					margin-left: auto
+					padding: 10px
+					position: relative
+					input
+						font-size: r(14px)
+						color: $white
+						padding: 0
 					&::before
-						color: $main
+						content: '\e87a'
+						font-family: Linearicons-Free
+						right: 0
+						left: auto
+						background: none
+						font-size: r(20px)
+						pointer-events: none
+					&::after
+						display: none

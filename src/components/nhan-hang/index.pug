@@ -9,24 +9,38 @@ section.section.brands-page
 					.row 
 						-for(i=0; i<4; i++)
 							.col-lg-3.col-md-6.col-6
-								.brand-item 
-									.option
-										img(src="./img/icons/option-new.png", alt="")
-									.big-img
-										a.img(href="")
-											img.lazyload(data-src="./img/km-ct/1.png", alt="")
-									.sm-box 
-										.sm-img
-											img.lazyload(data-src="./img/km-ct/22.png", alt="") 
-										.sm-img.active
-											img.lazyload(data-src="./img/km-ct/23.png", alt="")
-									.title 
-										a(href="") Cặp Doanh Nhân Legend 04
-									.wrap-price 
-										.price
-											.priceold 2.500.000 VND
-											.pricesale 1.990.000 VND
-										.order 
-											a(href="").btn.btn-order Mua ngay 
-
-					
+								.product-item 
+									.option.red
+										.inner mới
+									.option.red
+										.inner hot
+									.option.red
+										.inner 
+											img(src="./img/icons/free-ship.png", alt="")
+									.option.red
+										.inner 
+											img(src="./img/icons/option-1.png", alt="")
+									.option.red
+										.inner 
+											img(src="./img/icons/option-2.png", alt="")
+									.option.black
+										.inner -15%
+									.pro-img
+										a(href="san-pham-chi-tiet.html")
+											img.lazyload(data-src="./img/san-pham/i-"+i+".png", alt="")
+									ul 
+										li
+											a(href="") 
+												img.lazyload(data-src="./img/km-ct/22.png", alt="") 
+										li.active
+											a(href="") 
+												img.lazyload(data-src="./img/km-ct/23.png", alt="")
+									.pro-infor
+										.pro-title 
+											a(href="san-pham-chi-tiet.html") Cặp Doanh Nhân Legend 04
+										.pro-price.d-flex
+											.price
+												.priceold 2.500.000 VND
+												.pricesale 1.990.000 VND
+											.order 
+												a(href="").btn.btn-order Mua ngay

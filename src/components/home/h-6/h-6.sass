@@ -2,6 +2,7 @@
 	.wrap-partner
 		position: relative
 		.swiper-inner
+			cursor: pointer
 			.img
 				width: 180px
 				height: 120px
@@ -11,11 +12,21 @@
 				img
 					filter: grayscale(1)
 					opacity: .5
+					transition: all .5s
+			@media screen and ( min-width: 1025px )
+				&:hover
+					.img
+						img
+							filter: grayscale(0)
+							opacity: 1
 		.swiper-button-next,
 		.swiper-button-prev
-			&::after
+			&::before
 				color: #9a9a9a
 		.swiper-button-next
 			right: -45px
 		.swiper-button-prev
 			left: -45px
+	@media screen and ( max-width: 991.98px )
+		.section-title
+			padding-bottom: 10px

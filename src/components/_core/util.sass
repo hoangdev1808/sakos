@@ -1,6 +1,25 @@
-
+.cmszone
+	display: none
 .overflow
 	overflow: hidden
+#overlay
+	opacity: 0
+	visibility: hidden
+	pointer-events: none
+
+	background-color: rgba(0, 0, 0, .8)
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 150
+	transition: .3s all ease-in-out
+
+	&.active
+		opacity: 1
+		visibility: visible
+		pointer-events: visible
 .container--tabs
 	.nav-tabs
 		display: flex
@@ -13,17 +32,11 @@
 				> a
 					color: $main
 					cursor: default
-	.tab-content
-		width: 100%
-
-		> .tab-pane
-			display: none
-
-			&.active
-				display: block
-
-		> .active
+	.tab-panel
+		display: none
+		&.active
 			display: block
+
 .lcl
 	overflow: hidden
 	display: -webkit-box
@@ -87,19 +100,205 @@
 	height: 38px
 	position: absolute
 	&.black
-		right: 0
+		right: 10px
 		top: 0
+		display: flex
+		align-items: center
+		justify-content: center
 		background: url(../img/icons/bg-black.png)
+		background-size: cover
 	&.red
-		left: 0
+		left: 10px
 		top: 0
+		display: flex
+		align-items: center
+		justify-content: center
 		background: url(../img/icons/bg-red.png)
+		background-size: cover
+		background-position: center
 	.inner
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%, -50%)
 		font-size: 12px
 		text-transform: uppercase
 		color: $white
 		font-weight: bold
+.cmsadminpanel
+	nav
+		.listmenu
+			li
+				.form-inline
+					display: flex
+					.form-group
+						display: flex
+						align-items: center
+						.sr-only
+							color: $white
+							position: static
+							width: auto
+							height: auto
+							padding: 0 10px
+.commentpanel
+	display: none !important
+.new-list-page,
+.product-detail-page
+	#pagebanner
+		display: none
+.news-detail-page
+	.zone-list
+		display: none
+.wrap-form-promotion
+	margin-top: 10px
+	.wrap-form
+		width: 100%
+		position: relative
+		.form-group
+			position: relative
+			input
+				width: 100%
+				height: 40px
+				border-radius: 5px 0 0 5px
+				border: solid 1px #cccccc
+				border-right: none
+			span
+				position: absolute
+				top: 100%
+				left: 0
+				width: 100%
+			&.frm-btnwrap
+				position: absolute
+				top: 0
+				right: 0
+				border: none
+				width: 150px
+				.frm-btn
+					width: 100%
+					height: 40px
+					border-radius: 0
+					background: $main
+					box-shadow: unset
+					input
+						width: 100%
+						border-radius: 0
+						border: none
+					&::after
+						content: 'ĐĂNG KÝ'
+						color: $white
+						padding-left: 0
+					&::before
+						display: none
+.product-item
+	position: relative
+	margin-bottom: 30px
+	padding-top: 20px
+	.pro-img
+		width: 100%
+		margin-bottom: 28px
+		a
+			+img-scale(.5)
+	ul
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 30px
+		li
+			width: 40px
+			height: 40px
+			display: flex
+			align-items: center
+			justify-content: center
+			background: #f8f8f8
+			border: solid 1px #eaeaea
+			a
+				width: 100%
+				display: inline-block
+				+img-scale(.6)
+			+ li
+				margin-left: 10px
+			&.active
+				border: solid 1px $main
+	.pro-infor
+		padding: 0 10px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		.pro-title
+			display: flex
+			justify-content: center
+			padding-bottom: 8px
+		.pro-price
+			justify-content: space-between
+			.price
+				.priceold
+					color: $gray
+					text-decoration: line-through
+				.pricesale
+					font-size: r(18px)
+					font-weight: 700
+					letter-spacing: 0.05px
+	@media screen and ( min-width: 1025px )
+		&:hover
+			.pro-img
+				a
+					img
+						transform: scale(.95)
+	@media screen and ( max-width: 1199.98px )
+		.pro-infor
+			.pro-title
+				font-size: r(14px)
+			.pro-price
+				.price
+					.priceold
+						font-size: r(13px)
+					.pricesale
+						font-size: r(14px)
+				.order
+					.btn-order
+						padding: 5px
+	@media screen and ( max-width: 575.98px )
+		.pro-infor
+			padding: 0
+		.pro-img
+			margin-bottom: 10px
+			a
+				+img-scale(.5)
+		.option
+			width: 37px
+			height: 31px
+			.inner
+				font-size: r(13px)
+			&.red
+				left: 0
+			&.black
+				right: 0
+		ul
+			margin-bottom: 10px
+
+.productpage
+	#zone-nav
+		display: none
+.zone-list
+	width: 100%
+	padding: 6px 0
+	margin-bottom: 8px
+	border-bottom: solid 1px #555555
+	ul
+		display: flex
+		align-items: center
+		justify-content: center
+		li
+			a
+				font-size: 18/16*1rem
+				color: $gray-2
+			+ li
+				margin-left: 53px
+			&.active
+				position: relative
+				a
+					font-weight: 700
+				&::after
+					position: absolute
+					bottom: -8px
+					left: 0
+					width: 100%
+					height: 3px
+					background: $black
+					content: ''

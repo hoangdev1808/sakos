@@ -1,7 +1,9 @@
 header
 	position: fixed
 	width: 100%
+	border-bottom: solid 1px #ebebeb
 	z-index: 1000
+	box-shadow: 0 0 20px rgba(33,33,33,.2)
 	.nav-top
 		background: $main
 		.wrapper-left
@@ -53,9 +55,18 @@ header
 					margin-right: 10px
 				.wrap
 					li
-						.text
+						padding: 0 7px
+						position: relative
+						a
 							color: $white
 							font-size: 14/16*1rem
+					li + li
+						&::after
+							position: absolute
+							top: 0
+							left: -2px
+							content: '/'
+							color: $white
 				&::after
 					position: absolute
 					top: 0
@@ -68,6 +79,9 @@ header
 				padding: 0 10px
 				position: relative
 				cursor: pointer
+				.ModuleContent
+					display: flex
+					align-items: center
 				.quilt
 					width: 22px
 					height: 22px
@@ -117,12 +131,14 @@ header
 	.nav-bottom
 		background: $white
 		align-items: center
-		box-shadow: 0 0 11px rgba(33,33,33,.2)
+
 		.navbar
 			padding-top: 15px
 			padding-bottom: 10px
 			height: 100%
 			position: relative
+			.Module
+				position: static
 			.nav-brand
 				width: 125px
 			.nav
@@ -152,7 +168,8 @@ header
 							right: 0
 							opacity: 0
 							visibility: hidden
-							transition: all .5s
+							transition: all .3s
+							background: $main
 							ul
 								width: 220px
 								background: #d52429
@@ -180,7 +197,7 @@ header
 												height: 1px
 												background: $white
 												content: ''
-												transition: all .5s
+												transition: all .3s
 										.btnsub
 											display: flex
 											align-items: center
@@ -188,17 +205,16 @@ header
 											em
 												color: $white
 									.megasub__dropdown
-										background: $main
 										position: absolute
 										top: 0
 										right: 0
 										display: flex
+										opacity: 0
+										visibility: hidden
 										width: calc( 100% - 17.9% )
 										ul
 											background-color: $main
-											opacity: 0
-											visibility: hidden
-											transition: all .5s
+											transition: all .3s
 											li
 												a
 													color: $white
@@ -209,7 +225,7 @@ header
 													right: 0
 													opacity: 0
 													visibility: hidden
-													transition: all .5s
+													transition: all .3s
 													padding-top: 37px
 													padding-bottom: 40px
 													padding-left: 30px
@@ -225,6 +241,7 @@ header
 														.product
 															opacity: 1
 															visibility: visible
+
 									@media screen and ( min-width: 992px )
 										&:hover
 											.title
@@ -232,9 +249,8 @@ header
 													&::after
 														width: 100%
 											.megasub__dropdown
-												ul
-													opacity: 1
-													visibility: visible
+												opacity: 1
+												visibility: visible
 							&.brand-list
 								width: 100%
 								border-top: solid 1px #ebebeb
@@ -265,15 +281,19 @@ header
 										padding-right: 10px
 									&:last-child
 										padding-left: 10px
+							&.showmega
+								display: block
 					@media screen and ( min-width: 992px )
 						&:hover
 							.nav-link
 								color: $main
-						&.mega
-							&:hover
-								.megasub
-									opacity: 1
-									visibility: visible
+							.megasub
+								opacity: 1
+								visibility: visible
+					&.active
+						.title
+							.nav-link
+								color: $main
 					+ .nav-item
 						margin-left: 46.5px
 			.wrapper-search
@@ -281,7 +301,6 @@ header
 				display: flex
 				align-items: center
 				.form-group
-					position: relative
 					width: 180px
 					input
 						width: 100%
@@ -304,6 +323,10 @@ header
 				.search-icon
 					@media screen and ( min-width: 1200px )
 						display: none
+	.showmega
+		display: none
+	@media screen and ( min-width: 1200px )
+		height: 103px
 	@media screen and ( max-width: 1279.98px )
 		.nav-bottom
 			.navbar
@@ -372,7 +395,7 @@ header
 					z-index: 1
 					opacity: 0
 					visibility: hidden
-					transition: all .5s
+					transition: all .3s
 					width: 50vw
 					padding-bottom: 0
 					.nav-item
@@ -409,16 +432,15 @@ header
 											top: 0
 											right: -100%
 											z-index: 3
-											transition: all .5s
+											transition: all .3s
 											ul
 												li
 													.product
 														display: none
 											&.active
 												right: 0
-												ul
-													opacity: 1
-													visibility: visible
+												opacity: 1
+												visibility: visible
 								&.active
 									right: 0
 									opacity: 1

@@ -1,5 +1,8 @@
-.support-page
+.hero-helper
 	background-color: #f8f8f8
+	.breadcrumb-wrapper
+		background-color: transparent
+.support-page
 	.row
 		background-color: $white
 	.wrap-left
@@ -24,86 +27,17 @@
 			width: 100%
 			text-align: center
 	.wrap-right
+		height: 100%
 		ul
 			padding: r(40px) r(30px)
+			height: 100%
 			li
 				cursor: pointer
 				&:first-child
 					.title
 						border-top: 1px solid $gray
 				&:last-child
-					.content
-						height: max-content
-						border-bottom: 0
-				.content
 					display: none
-					padding: r(10px) 0
-					padding-right: r(20px)
-					border-bottom: 1px solid $gray
-					height: 260px
-					overflow-y: auto
-					.wrap-form
-						.form-row
-							display: flex
-							width: 100%
-							justify-content: space-between
-							@media screen and ( max-width: 767.9px )
-								display: block
-							.form-group
-								width: 48%
-								@media screen and ( max-width: 767.9px )
-									width: 100%
-								input[type="text"]
-									width: 100%
-						.form-group
-							input[type="text"],
-							textarea
-								background-color: $white
-							textarea
-								height: 60px
-						input[type="reset"]
-							display: none
-						.frm-btn
-							border-radius: 5px
-							background: $main
-							color: $white
-							width: 115px
-							transition: .3s all ease-in-out
-							margin-left: auto
-							&::before
-								content: "\e87a"
-								font-family: "Linearicons-Free"
-								right: 0
-								left: auto
-								border-radius: 0
-								background-color: $main
-								color: $white
-								width: auto
-								height: auto
-								font-size: 30px
-								pointer-events: none
-								right: 15px
-								font-weight: 400
-								transition: .3s all ease-in-out
-							&::after
-								display: none
-							input[type="submit"]
-								background: $main
-								color: $white
-								font-size: 14px
-								font-weight: 400
-								z-index: 3
-								padding-left: 0
-								text-transform: none
-								transition: .3s all ease-in-out
-							&:hover
-								background: $white
-								input[type="submit"]
-									background: $white
-									color: $main
-								&::before
-									color: $main
-									background-color: $white
 				.title
 					position: relative
 					border-bottom: 1px solid $gray
@@ -118,12 +52,141 @@
 						font-family: "Material Icons"
 						right: 0
 						top: 50%
-						transform: translateY(-50%)  rotate(0)
+						transform: translateY(-50%) rotate(0)
 						font-size: 16px
 						color: $text
 						transition: .3s all ease-out
 					&.active
 						color: $main
 						&::before
-							transform: translateY(-50%)  rotate(-180deg)
+							transform: translateY(-50%) rotate(-180deg)
 							color: $main
+
+				.content
+					display: none
+					padding: r(10px) 0
+					padding-right: r(20px)
+					border-bottom: 1px solid $gray
+					height: 260px
+					overflow-y: auto
+
+					h3
+						font-size: r(14px)
+						font-weight: 800
+						text-transform: uppercase
+						color: $main
+					h4
+						font-size: r(14px)
+						font-weight: 700
+						line-height: 20px
+						color: $black
+					p
+						font-size: r(14px)
+
+					&.form-mes
+						padding-right: 0
+						height: max-content
+						overflow-y: unset
+						border-bottom: none
+					.wrap-form
+						position: relative
+						.form-row
+							display: flex
+							flex-direction: row
+							flex-wrap: wrap
+							width: 100%
+							justify-content: space-between
+							.form-group
+								flex: 1 0 50%
+								input
+									width: 100%
+									height: 40px
+								&:nth-child(odd)
+									padding-right: 10px
+								&:nth-child(even)
+									padding-left: 10px
+							@media screen and ( max-width: 575.98px )
+								.form-group
+									flex: 1 0 100%
+									&:nth-child(odd)
+										padding-right: 0
+									&:nth-child(even)
+										padding-left: 0
+						.form-group
+							textarea
+								width: 100%
+								height: 68px
+							&.frm-captcha
+								position: absolute
+								top: 100%
+								left: 0
+								display: flex
+								flex-direction: row-reverse
+								.frm-captcha-input
+									width: 200px
+									height: 40px
+									padding: 0
+									margin-left: 7px
+									input
+										width: 100%
+										height: 100%
+									@media screen and ( max-width: 767.98px )
+										width: 135px
+
+								.RadCaptcha
+									width: max-content !important
+									padding-left: 0
+									div
+										div
+											img
+												border: none
+												width: 159px !important
+												height: 40px !important
+												margin-right: 7px
+												@media screen and ( max-width: 767.98px )
+													width: 120px !important
+									.rcRefreshImage
+										&::before
+											content: '\e861'
+											font-family: Linearicons-Free
+											color: #110dab
+											font-size: r(30px)
+								@media screen and ( max-width: 575.98px )
+									position: static
+									.frm-captcha-input
+										margin-left: auto
+										width: 40%
+									.RadCaptcha
+										width: 40% !important
+										div
+											div
+												img
+													width: 100% !important
+							&.frm-btnwrap
+								position: absolute
+								top: 100%
+								right: 0
+								.frm-btn
+									width: 140px
+									height: 40px
+									border-radius: 5px
+									background: $main
+									input
+										color: $white
+										padding: 0
+										padding-right: 20px
+										font-size: r(14px)
+									&::before
+										width: auto
+										height: auto
+										content: '\e87a'
+										font-family: Linearicons-Free
+										right: 20px
+										left: auto
+										background: none
+										font-size: r(20px)
+										pointer-events: none
+									&::after
+										display: none
+								@media screen and ( max-width: 575.98px )
+									position: static
