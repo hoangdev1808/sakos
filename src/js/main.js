@@ -498,10 +498,11 @@ const moveBtn = () => {
 }
 /*==================== Scroll To Div ===================*/
 const scrollToDiv = () => {
-	$(".view-all .btn-view-all").click(function() {
+	$(".view-all .btn-view-all").click(function(e) {
+		e.preventDefault();
 		$('html,body').animate({
 			scrollTop: $(".b2b-9").offset().top
-		},800);
+		},"slow");
 	});
 }
 /*==================== LOAD FUNCTION ====================*/
