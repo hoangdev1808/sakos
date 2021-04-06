@@ -61,19 +61,7 @@ Facebook: https://fb.com/canhcam.vn
 							</div>
 						</div>
 						<div class="wrapper-middle">
-							<div class="swiper-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="swiper-inner"><a href="">Christmas Direct Discount 40%</a></div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-inner"><a href="">Christmas Direct Discount 40%</a></div>
-									</div>
-									<div class="swiper-slide">
-										<div class="swiper-inner"><a href="">Christmas Direct Discount 40%</a></div>
-									</div>
-								</div>
-							</div>
+							<portal:ModuleWrapper ID="mdl1352" runat="server" ConfigureModuleId="1352" />
 							<div class="swiper-button-prev"></div>
 							<div class="swiper-button-next"></div>
 						</div>
@@ -260,6 +248,9 @@ Facebook: https://fb.com/canhcam.vn
 		</portal:AutoHidePanel>
 		<div id="fb-root"></div>
 		<div id="overlay"></div>
+		<div class="icon-chat-box">
+			<portal:ModuleWrapper ID="mdl1353" runat="server" ConfigureModuleId="1353" />
+		</div>
 		<div class="popup-card">
 			<div class="popup-header">
 				<div class="title fw-900 text-uppercase f-16">Đặt hàng nhanh</div>
