@@ -28,12 +28,14 @@ const mainMenu = () => {
 			$('header').find('.megasub').removeClass('active')
 		}
 	});
-	$("header").find(".btn-sub").on("click", function () {
-		$(this).parent().next().toggleClass('active')
-	});
-	$("header").find(".btnsub").on("click", function () {
-		$(this).parent().next().toggleClass('active');
-	})
+	$("header").find(".btn-sub")
+		.on("click", function () {
+			$(this).parent().next().toggleClass('active')
+		});
+	$("header").find(".btnsub")
+		.on("click", function () {
+			$(this).parent().next().toggleClass('active');
+		})
 	$("#overlay").on('click', function () {
 		let $this = $(this);
 		$this.removeClass('active');
@@ -50,15 +52,6 @@ const mainMenu = () => {
 			$(this).closest('.megasub').removeClass('active')
 		}
 	});
-	$('header').find('.search-icon').on('click', function () {
-		$('.wrapper-search .form-group').slideToggle();
-	})
-	window.addEventListener("scroll", function () {
-		let headerHeight = $('header').outerHeight();
-		if (window.pageYOffset > headerHeight) {
-			$('.wrapper-search .form-group').slideUp();
-		}
-	})
 
 }
 
