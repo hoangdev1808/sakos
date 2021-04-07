@@ -667,11 +667,35 @@ const moveBtn = () => {
 }
 /*==================== Scroll To Div ===================*/
 const scrollToDiv = () => {
-	$(".view-all .btn-view-all").click(function(e) {
-		e.preventDefault();
+	$(".view-all .btn-view-all").click(function () {
 		$('html,body').animate({
 			scrollTop: $(".b2b-9").offset().top
-		},"slow");
+		}, 800);
+	});
+}
+
+const initMapping = () => {
+	$('header .showmega').appendTo('#mega-product');
+	$('.wrap-form-promotion').appendTo('.wrap-right-main');
+	$('.wrap-item-2').appendTo('.news-other');
+	$('.form-mes').appendTo('#list-6');
+	if ($('.about-page').length >= 1) {
+		$('#catelogry').appendTo('.catelogry')
+	}
+}
+const Showmap = () => {
+	$('.hero-network .wrap-left .wrap-contact').find('li').click(function () {
+		$(this).addClass('active');
+		var datahref = $(this).attr('data-href');
+		$('.wrap-map').find('iframe').attr('src', function () {
+			return datahref;
+		})
+		$('.hero-network .wrap-left .wrap-contact').find('li').not(this).removeClass('active')
+	});
+}
+const toggleTool = () => {
+	$('#tool-option').on('click', function () {
+		$(this).siblings('.zone-list').slideToggle();
 	});
 
 }
