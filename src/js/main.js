@@ -28,14 +28,12 @@ const mainMenu = () => {
 			$('header').find('.megasub').removeClass('active')
 		}
 	});
-	$("header").find(".btn-sub")
-		.on("click", function () {
-			$(this).parent().next().toggleClass('active')
-		});
-	$("header").find(".btnsub")
-		.on("click", function () {
-			$(this).parent().next().toggleClass('active');
-		})
+	$("header").find(".btn-sub").on("click", function () {
+		$(this).parent().next().toggleClass('active')
+	});
+	$("header").find(".btnsub").on("click", function () {
+		$(this).parent().next().toggleClass('active');
+	})
 	$("#overlay").on('click', function () {
 		let $this = $(this);
 		$this.removeClass('active');
@@ -52,6 +50,15 @@ const mainMenu = () => {
 			$(this).closest('.megasub').removeClass('active')
 		}
 	});
+	$('header').find('.search-icon').on('click', function () {
+		$('.wrapper-search .form-group').slideToggle();
+	})
+	window.addEventListener("scroll", function () {
+		let headerHeight = $('header').outerHeight();
+		if (window.pageYOffset > headerHeight) {
+			$('.wrapper-search .form-group').slideUp();
+		}
+	})
 
 }
 
@@ -667,13 +674,53 @@ const moveBtn = () => {
 }
 /*==================== Scroll To Div ===================*/
 const scrollToDiv = () => {
-	$(".view-all .btn-view-all").click(function () {
+	$(".view-all .btn-view-all").click(function (e) {
+		e.preventDefault();
 		$('html,body').animate({
 			scrollTop: $(".b2b-9").offset().top
-		}, 800);
+		}, "slow");
 	});
+
+}
+/*======================PHAN TRANG=================================*/
+const phantrang = () => {
+	$('.modulepager').find('.pagination').find('li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage').parent().hide()
+}
+const popUpCard = () => {
+	$('.order').on('click', function () {
+		$('.popup-card ').fancybox().trigger("click");
+	})
 }
 
+const cartToggle = () => {
+	$(".shopping-card-toggle").on("click", function () {
+		$(".shopping-card-toggle .shopping-cart-wrapper").slideToggle();
+	});
+	$(document).on("click", function (event) {
+		let $trigger = $("header");
+		let $trigger_2 = $(".shopping-card-toggle");
+		let $trigger_3 = $(".product-item .pro-infor .pro-price .order");
+		let $trigger_4 = $('.block-card .add-shopping-cart');
+		if (
+			$trigger !== event.target &&
+			!$trigger.has(event.target).length &&
+			$trigger_2 !== event.target &&
+			!$trigger_2.has(event.target).length &&
+			$trigger_3 !== event.target &&
+			!$trigger_3.has(event.target).length &&
+			$trigger_4 !== event.target &&
+			!$trigger_4.has(event.target).length
+		) {
+			$(".shopping-card-toggle .shopping-cart-wrapper").slideUp();
+		}
+	});
+	$('#btn-ttmh .click-more-address').on('click', function () {
+		$('.other-address').find('.user-info').slideToggle();
+	})
+	$('.block-card .add-shopping-cart .addto-cart').on('click', function () {
+		$(".shopping-card-toggle .shopping-cart-wrapper").slideDown();
+	})
+}
 const initMapping = () => {
 	$('header .showmega').appendTo('#mega-product');
 	$('.wrap-form-promotion').appendTo('.wrap-right-main');
@@ -699,48 +746,6 @@ const toggleTool = () => {
 	});
 
 }
-/*======================PHAN TRANG=================================*/
-const phantrang = () => {
-	$('.modulepager').find('.pagination').find('li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage').parent().hide()
-}
-const popUpCard = () => {
-	const mainBanner = $("#home-banner");
-	if (mainBanner.length >= 1) {
-		$('.order').on('click', function () {
-			$('.popup-card ').fancybox().trigger("click");
-		})
-	}
-}
-
-const cartToggle = () => {
-	$(".shopping-card-toggle").on("click", function () {
-		$(".shopping-card-toggle .shopping-cart-wrapper").slideToggle();
-	});
-	$(document).on("click", function (event) {
-		let $trigger = $("header");
-		let $trigger_2 = $(".shopping-card-toggle");
-		let $trigger_3 = $(".product-item .pro-infor .pro-price .order");
-		let $trigger_4 = $('.block-card .add-shopping-cart');
-		if (
-			$trigger !== event.target &&
-			!$trigger.has(event.target).length &&
-			$trigger_2 !== event.target &&
-			!$trigger_2.has(event.target).length &&
-			$trigger_3 !== event.target &&
-			!$trigger_3.has(event.target).length &&
-			$trigger_4 !== event.target &&
-			!$trigger_4.has(event.target).length
-		) {
-			$(".shopping-card-toggle .shopping-cart-wrapper").slideUp();
-		}
-	});
-	$(".product-item .pro-infor .pro-price .order").on("click", function () {
-		$(".shopping-card-toggle .shopping-cart-wrapper").slideDown();
-	});
-	$('#btn-ttmh .click-more-address').on('click', function () {
-		$('.other-address').find('.user-info').slideToggle();
-	})
-}
 /*==================== LOAD FUNCTION ====================*/
 $(document).ready(function () {
 	scrollTop();
@@ -758,7 +763,7 @@ $(document).ready(function () {
 	Showmap();
 	toggleTool();
 	phantrang();
-	popUpCard();
+	// popUpCard();
 	cartToggle();
 	$(function () {
 		$("#slider").slider({
