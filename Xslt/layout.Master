@@ -275,6 +275,15 @@ Facebook: https://fb.com/canhcam.vn
 								<div class="old-price">2.800.00 VND</div>
 								<div class="net-price">2.700.000 VND</div>
 							</div>
+							<div class="input-group">
+								<div class="input-group-btn">
+									<div class="qty-minus btn-number"><em class="material-icons">remove</em></div>
+								</div>
+								<input class="product-details-quantity input-number" type="text" value="1">
+								<div class="input-group-btn">
+									<div class="qty-plus btn-number"><em class="material-icons">add</em></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

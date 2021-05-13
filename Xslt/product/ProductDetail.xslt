@@ -15,12 +15,12 @@
 							<div class="wrap-slide-detail">
 								<div class="swiper-container gallery-thumbs">
 									<div class="swiper-wrapper">
-										<xsl:apply-templates select="ProductImages[position() != 2]" mode="Small"></xsl:apply-templates>
+										<xsl:apply-templates select="ProductImages" mode="Small"></xsl:apply-templates>
 									</div>
 								</div>
 								<div class="swiper-container gallery-top">
 									<div class="swiper-wrapper">
-										<xsl:apply-templates select="ProductImages[position() != 2]" mode="Big"></xsl:apply-templates>
+										<xsl:apply-templates select="ProductImages" mode="Big"></xsl:apply-templates>
 									</div>
 									<div class="swiper-button-next"></div>
 									<div class="swiper-button-prev"></div>
@@ -158,31 +158,7 @@
 						<div class="col-lg-7">
 							<div class="hero-img">
 								<div class="img">
-									<a>
-										<xsl:attribute name="data-fancybox">
-											<xsl:text disable-output-escaping="yes">video</xsl:text>
-										</xsl:attribute>
-										<xsl:attribute name="href">
-											<xsl:value-of select="ProductAttributes[3]/Content" disable-output-escaping="yes"></xsl:value-of>
-										</xsl:attribute>
-										<xsl:attribute name="title">
-											<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-										</xsl:attribute>
-										<xsl:attribute name="target">
-											<xsl:value-of select="Target" disable-output-escaping="yes"></xsl:value-of>
-										</xsl:attribute>
-										<img class="lazyload">
-											<xsl:attribute name="data-src">
-												<xsl:value-of select="ProductImages[position() = 2]/ImageUrl" disable-output-escaping="yes"></xsl:value-of>
-											</xsl:attribute>
-											<xsl:attribute name="alt">
-												<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-											</xsl:attribute>
-										</img>
-										<div class="icon">
-											<img src="/Data/Sites/1/skins/default/img/icons/video.png" />
-										</div>
-									</a>
+									<xsl:apply-templates select="ProductVideos"></xsl:apply-templates>
 								</div>
 							</div>
 						</div>
@@ -445,5 +421,32 @@
 				</div>
 			</div>
 		</div>
+	</xsl:template>
+	<xsl:template match="ProductVideos">
+		<a>
+			<xsl:attribute name="data-fancybox">
+				<xsl:text disable-output-escaping="yes">video</xsl:text>
+			</xsl:attribute>
+			<xsl:attribute name="href">
+				<xsl:value-of select="VideoUrl" disable-output-escaping="yes"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="title">
+				<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="target">
+				<xsl:value-of select="Target" disable-output-escaping="yes"></xsl:value-of>
+			</xsl:attribute>
+			<img class="lazyload">
+				<xsl:attribute name="data-src">
+					<xsl:value-of select="ThumbnailUrl" disable-output-escaping="yes"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+				</xsl:attribute>
+			</img>
+			<div class="icon">
+				<img src="/Data/Sites/1/skins/default/img/icons/video.png" />
+			</div>
+		</a>
 	</xsl:template>
 </xsl:stylesheet>
